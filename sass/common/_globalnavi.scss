@@ -1,0 +1,850 @@
+@use "../_setting" as s;
+
+
+// .globalNaviSmall　グローバルナビ ハンバーガーメニュー
+.globalNaviSmall {
+	&__icon {
+		width: 5em;
+		height: 5em;
+		position: absolute;
+		top:0;
+		right:0;
+	}
+	&__iconButton{
+		width: 5em;
+		height: 5em;
+		cursor:pointer;
+		float: right;
+		display: block;
+		background: rgba(s.$colorType04,1);
+		position: relative;
+		margin:1.5em 0 0 0;
+		z-index:999;
+	}
+	&__icon span {
+	    width: 2.5em;
+	    height: 1px;
+	    display: block;
+	    background: #FFF;
+	    position: absolute;
+	    left: 50%;
+	    top: 50%;
+	    margin-left: -23%; 
+	}
+	.modal{
+		z-index:100;
+	}
+}
+	
+
+.globalNaviSmall{
+	&__icon--type01{
+		// ハンバーガーメニュー 押す前
+		span {
+		  -webkit-transition: all 0.3s;
+		          transition: all 0.3s;
+		  -webkit-transform: rotate(0deg);
+		      -ms-transform: rotate(0deg);
+		          transform: rotate(0deg); 
+		}
+		.iconButton--top {
+		  -webkit-transform: translateY(-0.7em);
+		      -ms-transform: translateY(-0.7em);
+		          transform: translateY(-0.7em); 
+		}
+		.iconButton--bottom {
+		  -webkit-transform: translateY(0.7em);
+		      -ms-transform: translateY(0.7em);
+		          transform: translateY(0.7em); 
+    	}
+
+    	// ハンバーガーメニュー hover
+		&:hover {
+			.iconButton--top {
+			  -webkit-transform: translateY(-0.8em);
+			      -ms-transform: translateY(-0.8em);
+			          transform: translateY(-0.8em);
+			}
+			.iconButton--bottom {
+			  -webkit-transform: translateY(0.8em);
+			      -ms-transform: translateY(0.8em);
+			          transform: translateY(0.8em); 
+          	}
+    	}
+
+    	// ハンバーガーメニュー 押した後の動き
+		&.is-open {
+			.iconButton--middle {
+			  background: rgba(255, 255, 255, 0);
+			}
+			.iconButton--top {
+			  -webkit-transform: rotate(-45deg) translateY(0px);
+			      -ms-transform: rotate(-45deg) translateY(0px);
+			          transform: rotate(-45deg) translateY(0px); 
+			}
+			.iconButton--bottom {
+				  -webkit-transform: rotate(45deg) translateY(0px);
+				      -ms-transform: rotate(45deg) translateY(0px);
+				          transform: rotate(45deg) translateY(0px);
+			}
+    	}
+	}
+}
+
+
+
+/* .globalNaviSmall　スマホグローバルナビ
+------------------------------------------ */
+.globalNaviSmall {
+	display:block;
+	width:100%;
+	position: fixed;
+	z-index:888;
+	top:0;
+	left:0;
+	@include s.media(m){
+		display: none;
+	}
+	&__menu{
+		width:100%;
+	  	max-height: 100vh;
+		display:block;
+		&__inner{
+			width:100%;
+		  	min-height: 100vh;
+			overflow-x:hidden;
+			overflow-y:auto;
+  			padding: 2em;
+			display:block;
+		}
+		&__main{;
+			display:block;
+			margin-top:3em;
+			li {
+				border-bottom:#DBE6C0 dotted 1px;
+				display:block;
+				a{
+					text-decoration:none;
+					font-size:1.1em;
+					@include s.fontType01(Bold);
+					padding:0.8rem 0;
+					display:block;
+					color:s.$colorType07;
+					position:relative;
+					&:hover{
+						color:s.$colorType04;
+					}
+				}
+			}
+			>li span {
+					font-size:1.2em;
+					@include s.fontType01(Bold);
+					color:s.$colorType02;
+			}
+			>li:last-child {
+				margin-bottom:16em;
+			}
+		}
+		&__sub{
+			li{
+  				padding:0 0 0 1em;
+				&:last-child {
+					border-bottom:none;
+				}
+				ul{
+					li{
+						a{
+							padding-left:0.8em;
+							&::before {
+								content:"";
+								width:0.5em;
+								height:1px;
+								background:s.$colorType07;
+								display:block;
+								position:absolute;
+								top:50%;
+								left:0;
+								margin-top:-0.5px;
+							}
+						}
+					}	
+				}
+			}
+			>li span {
+					font-size:1.1em;
+					@include s.fontType01(Bold);
+					color:s.$colorType04;
+			}
+		}
+	}
+	.modal__overlay {
+		background: none;
+	}
+	.modal__container {
+		background:rgba(255,255,255,1);
+		width:100%;
+		max-width: 100%;
+		border-radius: 0;
+  		padding: 0;
+		min-height: 100vh;
+	}
+}
+
+
+/* Safari */
+_:lang(x)+_:-webkit-full-screen-document, .globalNaviSmall__menu {
+  min-height: -webkit-fill-available;
+}
+_:lang(x)+_:-webkit-full-screen-document, .globalNaviSmall__menu__inner {
+  min-height: -webkit-fill-available;
+}
+
+#modal-globalNaviSmall .globalNaviSmall__menu__main{
+	padding:6em 0 3em;
+}
+
+
+/* .globalNavi　グローバルナビ
+------------------------------------------ */
+.globalNavi{
+	display:none;
+	@include s.media(m){
+		display:block;
+	}
+	&__menu{
+		&__main{
+			display:block;
+			>li {
+				width: 85%;
+				display:block;
+			   	position: relative; /*z-indexの指定や子要素の基準とするために指定*/
+			   	z-index: 2; /*ドロップダウンしたメニューが隠れないように*/
+				margin:0 0 1em 15%;
+				>a,>span{
+					transition:all .3s ease;
+					display:block;
+					font-size:1.2em;
+					@include s.fontType01(Bold);
+					padding-left:2em;
+					position: relative;
+					&::before{
+						content:"";
+						width:2em;
+						height:2em;
+						background:url(../img/common/iconGlobalNavi01.svg) no-repeat center top;
+						background-size:70% auto;
+						position:absolute;
+						top:50%;
+						left:0;
+						margin-top:-0.7em;
+					}
+					&:hover{
+						color:s.$colorType06;
+					}
+				}
+				&:nth-child(1){ z-index:6;}
+				&:nth-child(2){ z-index:5;}
+				&:nth-child(3){ z-index:4;}
+				&:nth-child(4){ z-index:3;}
+				&:nth-child(2)>span::before{ background:url(../img/common/iconGlobalNavi02.svg) no-repeat center top; background-size:70% auto;}
+				&:nth-child(3)>span::before{ background:url(../img/common/iconGlobalNavi03.svg) no-repeat center top; background-size:70% auto;}
+				&:nth-child(4)>span::before{ background:url(../img/common/iconGlobalNavi04.svg) no-repeat center top; background-size:70% auto;}
+				&:nth-child(5)>a::before{ background:url(../img/common/iconGlobalNavi05.svg) no-repeat center top; background-size:70% auto;}
+				&:nth-child(6)>a::before{ background:url(../img/common/iconGlobalNavi06.svg) no-repeat center top; background-size:70% auto;}
+				&:nth-child(7)>a::before{ background:url(../img/common/iconGlobalNavi07.svg) no-repeat center top; background-size:70% auto;}
+				&:nth-last-child(1){
+					width: 80%;
+					margin:0 auto;
+					>a{
+						background:#06C755;
+						color:#FFF;
+						border-radius:2em;
+						padding:0.2em 0 0.2em 0.7em;
+						text-align:center;
+						box-shadow: 0 0 1em -0.6em rgba(0, 0, 0, .5);
+						@include s.media(xl){
+							padding:0.2em 0 0.2em 0;
+						}
+						&::before{
+							content:"";
+							width:1.5em;
+							height:1.5em;
+							background:url(../img/common/iconLine.svg) no-repeat center top;
+							background-size:70% auto;
+							position:absolute;
+							top:50%;
+							left:50%;
+							margin-top:-0.5em;
+							margin-left:-4.2em;
+							@include s.media(xl){
+								margin-left:-4.5em;
+							}
+						}
+						&:hover{
+							background:s.$colorType07;
+							box-shadow: 0 0 1em -0.6em rgba(0, 0, 0, .1);
+						}
+					}
+				}
+				&:nth-last-child(2){
+					width: 80%;
+					margin:4em auto 1em;
+					@include s.media(xl){
+						margin:3em auto 1em;
+					}
+					>a{
+						background:s.$colorType04;
+						color:#FFF;
+						border-radius:2em;
+						padding:0.2em 0 0.2em 0.7em;
+						pointer-events:none;
+						@include s.fontType02(Medium);
+						font-size:1.15em;
+						text-align:center;
+						box-shadow: 0 0 1em -0.6em rgba(0, 0, 0, .5);
+						@include s.media(xl){
+							padding:0.2em 0 0.2em 0;
+						}
+						&::before{
+							content:"";
+							width:1.5em;
+							height:1.5em;
+							background:url(../img/common/iconTel.svg) no-repeat center top;
+							background-size:70% auto;
+							position:absolute;
+							top:50%;
+							left:50%;
+							margin-left:-4.2em;
+							margin-top:-0.5em;
+							@include s.media(xl){
+								margin-left:-4.5em;
+							}
+						}
+					}
+				}
+			}
+			li a {
+				text-decoration:none;
+				display:block;
+				&:hover {
+					text-decoration:none;
+				}
+			}
+		}
+	}
+}
+
+.is-scroll .globalNavi{
+	width:89%;
+	display:block;
+	&__menu{
+		&__main{
+			display: none;
+			@include s.media(m){
+				width:100%;
+				display:flex;
+				justify-content:flex-end;
+				align-items:center;
+			}
+			>li {
+				width:8%;
+				height: 3.5em;
+				padding:1em 0 0 0;
+				display:block;
+			   	position: relative; /*z-indexの指定や子要素の基準とするために指定*/
+			   	z-index: 2; /*ドロップダウンしたメニューが隠れないように*/
+				margin:0 0 0.5em 1em;
+				@include s.media(xl){
+					width:6em;
+				}
+				>a,>span{
+					display:block;
+					font-size:0.9em;
+					@include s.fontType01(Bold);
+					padding-left:2em;
+					position: relative;
+				}
+				&:nth-child(5){
+					width:9%;
+					@include s.media(xl){
+						width:7em;
+					}
+				}
+				&:nth-child(7){
+					width:11%;
+					@include s.media(xl){
+						width:8em;
+					}
+				}
+				&:nth-last-child(1){
+					width:11.5%;
+					@include s.media(xl){
+						width:auto;
+						margin-right:1em;
+					}
+					>a{
+						padding:0.2em 0 0.2em 1.3em;
+						@include s.media(xl){
+							padding:0.2em 1em 0.2em 2.4em;
+						}
+						&::before{
+							@include s.media(xl){
+								margin-left:-4.3em;
+							}
+						}
+					}
+				}
+				&:nth-last-child(2){
+					width:12%;
+					@include s.media(xl){
+						width:auto;
+					}
+					margin-top:0;
+					>a{
+						padding:0.2em 0 0.2em 1.3em;
+						@include s.media(xl){
+							padding:0.2em 1em 0.2em 2em;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+/* .globalNavi__menu__sub　グローバルナビサブメニュー
+------------------------------------------ */
+
+.globalNavi__menu__main>li>ul.globalNavi__menu__sub {
+	width:100%;
+	opacity: 0;  /*サブメニューは最初は非表示にしておく*/
+	visibility: hidden;  /*サブメニューは最初は非表示にしておく*/
+	position: absolute;
+	top: 0;
+	right: -90%;
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+	background:#FFF;
+	padding:2em;
+	&::before{
+		content:none;
+		width:2.5em;
+		height:1px;
+		background:s.$colorType03;
+		display:block;
+		position:absolute;
+		top:3.2em;
+		left:-1em;
+		@include s.media(xl){
+			width:2.5em;
+			left:-0.5em;
+		}
+	}
+	li{
+		height:auto;
+		padding: 0;  /*親メニューのパディングを解除*/
+		margin:0;
+		*margin-top:-8px;
+		display:block;
+		line-height:1.5em;
+		position:relative;
+		a{
+			@include s.fontType01(Regular);
+			padding:0.5em 1em;
+			background-color: #FFF;
+			text-decoration:none;
+			color: #666;
+			display:block;
+			font-size:0.9em;
+			position:relative;
+			border-bottom:#a2c254 solid 1px;
+			&:hover{ 
+				color:#000;
+				background-color: #EEE;
+			}
+		}
+		span{
+			@include s.fontType01(Regular);
+			padding:0.5em 1em;
+			color:s.$colorType04;
+			display:block;
+			font-size:0.9em;
+			position:relative;
+		}
+	}
+}
+
+.home .globalNavi__menu__main>li>ul.globalNavi__menu__sub {
+	&::before{
+		content:"";
+		width:2.5em;
+		height:1px;
+		background:s.$colorType03;
+		display:block;
+		position:absolute;
+		top:3.2em;
+		left:-1em;
+		@include s.media(xl){
+			width:2.5em;
+			left:-0.5em;
+		}
+	}
+}
+
+.home .is-scroll .globalNavi__menu__main>li>ul.globalNavi__menu__sub {
+	&::before{
+		content:none;
+	}
+}
+
+.globalNavi__menu__main>li:hover>ul.globalNavi__menu__sub {
+	width:200%;
+	top: -2em;
+	right: -170%;
+	visibility:visible;
+	opacity: 1;
+	display: block;    /*マウスオーバー時にサブメニューを表示する*/
+	box-shadow: -6px 0px 10px -6px rgba(0, 0, 0, 0.2);
+	z-index:2;
+	@include s.media(xl){
+		right: -165%;
+	}
+}
+
+.globalNavi__menu__main>li:nth-child(1):hover>ul.globalNavi__menu__sub,
+.globalNavi__menu__main>li:nth-child(3):hover>ul.globalNavi__menu__sub{
+	width:280%;
+	right: -250%;
+	@include s.media(xl){
+		right: -245%;
+	}
+	&>li{
+		width:60%;
+		float:right;
+		display:block;
+	}
+	&>li:nth-child(1){
+		width:35%;
+		float:left;
+	}
+}
+
+
+
+.is-scroll ul.globalNavi__menu__main>li{
+	position:static;
+}
+
+.is-scroll .globalNavi__menu__main>li{
+	>ul.globalNavi__menu__sub {
+		width:100vw;
+		display:flex;
+		flex-wrap:wrap;
+		position: absolute;
+		top: 5em;
+		left: 0;
+		right:unset;
+		background:rgba(#FFF,1);
+		padding:2em 20% 3em;
+		//border-bottom:s.$colorType02 solid 3px;
+		box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.2);
+		li{
+			width:45%;
+			height:auto;
+			padding: 0;  /*親メニューのパディングを解除*/
+			margin:0 0.5% 0.3em;
+			*margin-top:-8px;
+			display:block;
+			line-height:1.5em;
+			position:relative;
+			@include s.media(m){
+				width:48%;
+			}
+			@include s.media(xl){
+				width:42%;
+			}
+			a,span{
+				min-width:80%;
+				@include s.fontType01(Regular);
+				padding:0.7em 1em;
+				background-color: #FFF;
+				text-decoration:none;
+				color: #666;
+				display:inline-block;
+				font-size:1em;
+				position:relative;
+				border-bottom:#a2c254 solid 1px;
+				//border-right:s.$colorType03 solid 1px;
+				&:hover{ 
+					color:#000;
+					background-color: #EEE;
+				}
+				&::after{ 
+					content:none;
+					width:80%;
+					height:1px;
+					display:block;
+					background:#a2c254;
+					position:absolute;
+					bottom:0;
+					left:0;
+				}
+			}
+			span{
+				@include s.fontType01(Regular);
+				background: none;
+				border:none;
+				color:s.$colorType04;
+				&::before{
+					content:none;
+				}
+				&:hover{ 
+					color:s.$colorType04;
+					background: none;
+				}
+			}
+		}
+	}
+}
+
+.is-scroll .globalNavi__menu__main>li:nth-child(1):hover>ul.globalNavi__menu__sub,
+.is-scroll .globalNavi__menu__main>li:nth-child(3):hover>ul.globalNavi__menu__sub{
+	&>li{
+		width:45%;
+		@include s.media(m){
+			width:48%;
+		}
+		@include s.media(xl){
+			width:45%;
+		}
+		&:nth-child(1){
+			width:100%;
+			margin:0 0 2em;
+		}
+	}
+}
+
+.is-scroll .globalNavi__menu__main>li:hover>ul.globalNavi__menu__sub {
+	width:100vw;
+	display:flex;
+	flex-wrap:wrap;
+	top: 3.5em;
+	visibility:visible;
+	opacity: 1;
+}
+
+.is-scroll .globalNavi__menu__main>li{
+	&::before{
+		font-size:2em;
+		content: "\f0d8";
+		font-family: 'icomoon';
+		position:absolute;
+		top:2em;
+		right:0;
+		transition:all .3s ease;
+		opacity:0;
+		color:s.$colorType06;
+		transform: scale(0);
+		@include s.media(xl){
+			right:34em;
+		}
+	}
+	&:hover::before{
+		top:0.7em;
+		display:block;
+		transform: scale(1);
+	}
+	&:nth-child(1)::before{
+		right:34em;
+		@include s.media(xl){
+			right:34em;
+		}
+	}
+	&:nth-child(1):hover::before{
+		opacity:1;
+	}
+	&:nth-child(2)::before{
+		right:30.5em;
+		@include s.media(xl){
+			right:30.5em;
+		}
+	}
+	&:nth-child(2):hover::before{
+		opacity:1;
+	}
+	&:nth-child(3)::before{
+		right:27em;
+		@include s.media(xl){
+			right:27em;
+		}
+	}
+	&:nth-child(3):hover::before{
+		opacity:1;
+	}
+	&:nth-child(4)::before{
+		right:23.5em;
+		@include s.media(xl){
+			right:23.5em;
+		}
+	}
+	&:nth-child(4):hover::before{
+		opacity:1;
+	}
+}
+
+
+/* .globalNavi__menu__sub　グローバルナビサブメニュー2階層目
+------------------------------------------ */
+
+.globalNavi__menu__main>li>ul.globalNavi__menu__sub>li>ul.globalNavi__menu__sub {
+	width:100%;
+	opacity: 1;  /*サブメニューは最初は非表示にしておく*/
+	//visibility: hidden;  /*サブメニューは最初は非表示にしておく*/
+	//position: absolute;
+	//top: 0;
+	//right: -90%;
+	-webkit-transition: all .2s ease;
+	transition: all .2s ease;
+	li{
+		width:100%;
+		height:auto;
+		padding: 0;  /*親メニューのパディングを解除*/
+		margin:0;
+		*margin-top:-8px;
+		display:block;
+		line-height:1.5em;
+		position:relative;
+		padding-left:1em;
+		a,span{
+			@include s.fontType01(Regular);
+			padding:0.5em 1em;
+			background-color: #FFF;
+			text-decoration:none;
+			color: #666;
+			display:block;
+			font-size:0.9em;
+			position:relative;
+			border-bottom:#a2c254 solid 1px;
+			&:hover{ 
+				color:#000;
+				background-color: #EEE;
+			}
+			&:before{
+		         	content: "\f0da";
+		           	font-family: 'icomoon';
+		            	margin-right: 0.5em;
+				color:s.$colorType04;
+			}
+		}
+		span{
+			&::before{
+				content:"";
+                    		content: "\f0da";
+                    		font-family: 'icomoon';
+				position:absolute;
+				top:50%;
+				right:1em;
+				margin-top:-0.8em;
+			}
+		}
+	}
+}
+
+.globalNavi__menu__main>li>ul.globalNavi__menu__sub>li:hover>ul.globalNavi__menu__sub {
+	width:100%;
+	right: -100%;
+	visibility:visible;
+	opacity: 1;
+	display: block;    /*マウスオーバー時にサブメニューを表示する*/
+}
+
+.is-scroll .globalNavi__menu__main>li{
+	>ul.globalNavi__menu__sub>li>ul.globalNavi__menu__sub {
+		width:100%;
+		display:flex;
+		flex-wrap:wrap;
+		opacity: 1;  /*サブメニューは最初は非表示にしておく*/
+		visibility: hidden;  /*サブメニューは最初は非表示にしておく*/
+		position: static;
+		top: 0;
+		right: -90%;
+		-webkit-transition: all .2s ease;
+		transition: all .2s ease;
+		li{
+			width:25%;
+			height:auto;
+			padding: 0;  /*親メニューのパディングを解除*/
+			margin:0 1% 0.3em;
+			*margin-top:-8px;
+			display:block;
+			line-height:1.5em;
+			position:relative;
+			@include s.media(xl){
+				width:25%;
+			}
+			a,span{
+				min-width:80%;
+				@include s.fontType01(Regular);
+				padding:0.7em 1em;
+				background-color: #FFF;
+				text-decoration:none;
+				color: #666;
+				display:block;
+				font-size:1em;
+				position:relative;
+				border-bottom:#a2c254 solid 1px;
+				//border-right:s.$colorType03 solid 1px;
+				&:before{
+		                    	content: "\f0da";
+		                    	font-family: 'icomoon';
+		                    	margin-right: 0.5em;
+					color:s.$colorType04;
+				}
+				&:hover{ 
+					color:#000;
+					background-color: #EEE;
+				}
+			}
+			span{
+				&::before{
+					content:"";
+	                    		content: "\f0da";
+	                    		font-family: 'icomoon';
+					position:absolute;
+					top:50%;
+					right:1em;
+					margin-top:-0.8em;
+				}
+			}
+		}
+	}
+	&:nth-child(1)>ul.globalNavi__menu__sub>li>ul.globalNavi__menu__sub li{
+		width:19%;
+		a{
+			display:block;
+		}
+	}
+}
+
+.is-scroll .globalNavi__menu__main>li:hover>ul.globalNavi__menu__sub>li>ul.globalNavi__menu__sub {
+	width:100%;
+	right: -100%;
+	visibility:visible;
+	opacity: 1;
+	display:flex;
+	flex-wrap:wrap;
+}
+
+
+/* When Active Page */
+/*body#■■ .globalNavi ul.globalNavi__menu__main li:nth-child(■) ul.globalNavi__menu__sub li:nth-child(■) a { color:#000; background-color: #DDD; pointer-events: none; }*/
+
+
+
+
+

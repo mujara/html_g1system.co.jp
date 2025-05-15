@@ -1,0 +1,116 @@
+@use "../_setting" as s;
+
+#header {
+	width:100%;
+	position:fixed;
+	transition: .3s;
+	z-index:5;
+	background:#FFF;
+	box-shadow: 0px 0px 0.3em 0.1em rgba(0, 0, 0, 0.2);
+	top:0;
+	left:0;
+}
+
+.home #header {
+	@include s.media(m){
+		position:absolute;
+		width:17%;
+		z-index:5;
+		min-height:44.1em;
+		box-shadow: 0px 0px 0.3em 0.1em rgba(0, 0, 0, 0);
+	}
+}
+
+.header__headTop {
+	height:1.5em;
+	background:s.$colorType02;
+	line-height:1;
+	padding-top:0.5em;
+	display:block;
+	z-index:999;
+	position:relative;
+	@include s.media(m){
+		display:none;
+	}
+	span{
+		color:#FFF;
+		font-size:0.8em;
+		display:block;
+		text-align:center;
+	}
+}
+
+.header__siteTitle {
+	display:block;
+	width:7.2em;
+	@include s.media(m){
+		width:100%;
+	}
+}
+
+.header__siteTitleBox {
+	width:75%;
+	display:flex;
+	justify-content:space-between;
+	align-items:center;
+	padding:1em 0 1em 1em;
+	z-index:999;
+	position:relative;
+	background:#FFF;
+	@include s.media(m){
+		display:block;
+		width:58%;
+		margin:0 auto 3em;
+		padding:3em 0 0 0;
+		background:none;
+	}
+	.header__siteTitle img{
+		width:100%;
+	}
+}
+
+.is-scroll .header__siteTitleBox{
+	@include s.media(m){
+		width:6em;
+		margin:0 0 0 2em;
+	}
+	
+}
+
+.header__headBoxInner{
+	display:block;
+}
+.is-scroll .header__headBoxInner{
+	@include s.media(m){
+		width:100%;
+		display:flex;
+		justify-content:space-between;
+		align-items:center;
+	}
+}
+
+.is-scroll .header__siteTitleBox{
+	@include s.media(m){
+		padding:0;
+	}
+}
+
+.header__siteTitleNavi{
+	display:block;
+	text-align:right;
+	@include s.media(m){
+		display:none;
+	}
+	a{
+		display:inline-block;
+		width:2em;
+		height:2em;
+		margin-left:1em;
+		img{
+			width:100%;
+		}
+		&:nth-child(2){
+			margin-left:0.5em;
+		}
+	}
+}

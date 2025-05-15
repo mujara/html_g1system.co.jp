@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="keywords" content="●サイトの検索キーワード●" />
+<meta name="description" content="●サイトの検索説明●" />
+<title>●サイトのタイトル●</title>
+<meta property="og:url" content="●ページの URL●" />
+<meta property="og:type" content="●ページの種類●website article" />
+<meta property="og:title" content="●ページの タイトル●" />
+<meta property="og:description" content="●ページの説明文●" />
+<meta property="og:site_name" content="●サイト名●" />
+<meta property="og:image" content="●サムネイル画像のURL●" />
+<meta name="apple-mobile-web-app-title" content="●iOS表示名●" />
+<meta name="author" content="●作者名●" />
+<link rel="apple-touch-icon" href="iphone.png">
+<link rel="stylesheet" href="css/import.css" media="all" />
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,500;1,500&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body id="home" class="home">
+
+<div id="wrapper" class="--typeScrollAction">
+	<header id="header" class="clearfix">
+		<p class="header__headTop">
+			<span>名古屋・東海エリアの不動産売買・賃貸・管理ならジーワンシステム</span>
+		<!-- /.header__headTop --></p>
+
+		<div class="header__headBox">
+
+		<div id="pageTopFix" class="is-scroll">
+			<div class="header__headBoxInner">
+				<div class="header__siteTitleBox">
+					<h1 class="header__siteTitle"><a href="<?php echo home_url(); ?>"><img src="img/common/siteTitle.png" alt="名古屋・東海エリアの不動産売買・賃貸・管理ならジーワンシステム" /></a></h1>
+					<div class="header__siteTitleNavi">
+				            <a href="tel:0527343849"><img src="img/common/iconTel02.svg" alt="電話" /></a>
+				            <a href="https://page.line.me/ggw9971w" target="_blank"><img src="img/common/iconLine02.svg" alt="LINE" /></a>
+				            <a href="<?php echo home_url(); ?>/contact"><img src="img/common/iconMail.svg" alt="Mail" /></a>
+					</div>
+				<!-- /.header__siteTitleBox --></div>
+				<nav class="globalNavi">
+						<ul class="globalNavi__menu__main">
+							<li><span>買いたい</span>
+								<ul class="globalNavi__menu__sub">
+									<li><span>物件情報</span>
+										<ul class="globalNavi__menu__sub">
+											<li><a href="<?php echo home_url(); ?>/properties/detachedhouse">戸建て</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties/apartment">中古マンション</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties/land">土地</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties/investment">投資、企業向け</a></li>
+											<li><a href="<?php echo home_url(); ?>/contact02">店舗・事務所</a></li>
+										</ul>
+									</li>
+									<li><a href="<?php echo home_url(); ?>/properties">販売中の情報一覧</a></li>
+									<li><a href="<?php echo home_url(); ?>/estate/reason">当社仕入れ不動産が、選ばれる理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/estate/procedure">マンション、戸建て購入の流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/estate/qa">マンション、戸建て購入時によくあるご質問</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/estate">マンション、戸建て購入で読んでおきたいブログ</a></li>
+								</ul> 
+			            			</li>
+							<li><span>売りたい</span>
+								<ul class="globalNavi__menu__sub">
+									<li><a href="<?php echo home_url(); ?>/sell/reason">不動産売却で選ばれている理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/sellhigh">不動産を高く売る方法</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/sellfast">マンション、戸建てを早く売る方法</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/case">買取実績</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/procedure">査定から売却までの流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/qa">売却時によくあるご質問</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/sell">不動産を売りたい時に読んでおきたいブログ</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/contact">思いを叶える売却相談</a></li>
+								</ul> 
+			            			</li>
+							<li><span>借りたい</span>
+								<ul class="globalNavi__menu__sub">
+									<li><span>物件情報</span>
+										<ul class="globalNavi__menu__sub">
+											<li><a href="https://mylist-v2.realnetpro.com/14032m1/" target="_blank">賃貸一覧</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties02">テナント・事業用賃貸</a></li>
+										</ul>
+									</li>
+									<li><a href="<?php echo home_url(); ?>/rent/reason">不動産賃貸で選ばれている理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/rent/procedure">賃貸契約の流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/welfare">生活保護受給者向け賃貸情報</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/rent">賃貸で損しない！賃貸ブログ情報</a></li>
+								</ul> 
+			            			</li>
+							<li><span>管理依頼</span>
+								<ul class="globalNavi__menu__sub">
+									<li><a href="<?php echo home_url(); ?>/admin/reason">マンション管理で選ばれている理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/procedure">管理依頼の流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/contact">まずは、今の管理会社とご比較を　ご質問フォーム</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/qa">マンション、アパート管理でよくあるご質問</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/admin">マンション管理ブログ</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/contact">高リピート率の管理担当者に相談する</a></li>
+								</ul> 
+			            			</li>
+							<li><a href="<?php echo home_url(); ?>/reform/about">リフォーム</a></li>
+							<li><a href="<?php echo home_url(); ?>/company">会社概要</a></li>
+							<li><a href="<?php echo home_url(); ?>/blog/estate">お役立ち情報</a></li>
+							<li><a href="tel:0527343849">052-734-3849</a></li>
+							<li><a href="https://page.line.me/ggw9971w" target="_blank">LINEでご相談</a></li>
+						</ul>
+				<!-- /.globalNavi --></nav>
+
+			<!-- /.header__headBoxInner --></div>
+		<!-- /#pageTopFix --></div>
+		
+			<nav class="globalNaviSmall">
+				<div id="globalNaviSmallIcon" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+					<div class="globalNaviSmall__iconButton">
+						<span class="iconButton--top"></span>
+						<span class="iconButton--middle"></span>
+						<span class="iconButton--bottom"></span>
+					</div>
+				</div>
+
+				<div class="modal micromodal-slide" id="modal-globalNaviSmall" aria-hidden="true">
+					<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+				    		<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-globalNaviSmall-labelledby">
+
+							<div class="globalNaviSmall__menu" id="modal-globalNaviSmall-labelledby">
+								<div class="globalNaviSmall__menu__inner">
+									<ul class="globalNaviSmall__menu__main">
+										<li><a href="<?php echo home_url(); ?>/reform/about">リフォーム</a></li>
+										<li><a href="<?php echo home_url(); ?>/company">会社概要</a></li>
+										<li><a href="<?php echo home_url(); ?>/blog/estate">お役立ち情報</a></li>
+										<li><a href="<?php echo home_url(); ?>/estate/contact">不動産購入のご相談</a></li>
+										<li><a href="<?php echo home_url(); ?>/sell/contact">不動産売却のご相談</a></li>
+										<li><a href="<?php echo home_url(); ?>/admin/contact">不動産管理のご相談</a></li>
+										<li><a href="<?php echo home_url(); ?>/rent/contact">賃貸のご相談</a></li>
+										<li><a href="<?php echo home_url(); ?>/company/privacy-policy">プライバシーポリシー</a></li>
+									</ul>
+								<!-- /.globalNaviSmall__menu__inner --></div>
+							<!-- /.globalNaviSmall__menu --></div>
+
+				    		<!-- /.modal__container --></div>
+					<!-- /.modal__overlay --></div>
+				<!-- /#modal-globalNaviSmall --></div>
+
+		    <!-- /.globalNaviSmall --></nav>
+
+        <!-- /.header__headBox --></div>
+	<!-- /#header --></header>
+    
+	<section class="mainVisual">
+		<div class="mainVisual__flowBox">
+			<div class="mainVisual__flowBoxInner">
+				<!-- スライダーここから -->
+				<div class="sliderBox--typeFlow01">
+				    <!-- Slider全体のコンテナ -->
+				    <div class="swiper" dir="rtl">
+				      <!-- Sliderの内包コンテナ -->
+				      <div class="swiper-wrapper">
+				        <!-- Slideさせたいコンテンツ -->
+					<div class="swiper-slide"><figure><img src="img/home/flowImage01.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage02.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage03.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage04.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage05.jpg" alt=""></figure></div>
+
+					<div class="swiper-slide"><figure><img src="img/home/flowImage01.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage02.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage03.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage04.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage05.jpg" alt=""></figure></div>
+
+					<div class="swiper-slide"><figure><img src="img/home/flowImage01.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage02.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage03.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage04.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage05.jpg" alt=""></figure></div>
+				      <!-- /swiper-wrapper --></div>
+				    <!-- /swiper --></div>
+				<!-- /.sliderBox--typeFlow --></div>
+				<!-- スライダーここまで -->
+			<!-- /.mainVisual__flowBoxInner --></div>
+
+			<div class="mainVisual__flowBoxInner">
+				<!-- スライダーここから -->
+				<div class="sliderBox--typeFlow01">
+				    <!-- Slider全体のコンテナ -->
+				    <div class="swiper">
+				      <!-- Sliderの内包コンテナ -->
+				      <div class="swiper-wrapper">
+				        <!-- Slideさせたいコンテンツ -->
+					<div class="swiper-slide"><figure><img src="img/home/flowImage06.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage07.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage08.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage09.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage10.jpg" alt=""></figure></div>
+
+					<div class="swiper-slide"><figure><img src="img/home/flowImage06.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage07.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage08.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage09.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage10.jpg" alt=""></figure></div>
+
+					<div class="swiper-slide"><figure><img src="img/home/flowImage06.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage07.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage08.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage09.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage10.jpg" alt=""></figure></div>
+				      <!-- /swiper-wrapper --></div>
+				    <!-- /swiper --></div>
+				<!-- /.sliderBox--typeFlow --></div>
+				<!-- スライダーここまで -->
+			<!-- /.mainVisual__flowBoxInner --></div>
+
+			<div class="mainVisual__flowBoxInner">
+				<!-- スライダーここから -->
+				<div class="sliderBox--typeFlow01">
+				    <!-- Slider全体のコンテナ -->
+				    <div class="swiper" dir="rtl">
+				      <!-- Sliderの内包コンテナ -->
+				      <div class="swiper-wrapper">
+				        <!-- Slideさせたいコンテンツ -->
+					<div class="swiper-slide"><figure><img src="img/home/flowImage11.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage12.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage13.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage14.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage15.jpg" alt=""></figure></div>
+
+					<div class="swiper-slide"><figure><img src="img/home/flowImage11.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage12.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage13.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage14.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage15.jpg" alt=""></figure></div>
+
+					<div class="swiper-slide"><figure><img src="img/home/flowImage11.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage12.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage13.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage14.jpg" alt=""></figure></div>
+					<div class="swiper-slide"><figure><img src="img/home/flowImage15.jpg" alt=""></figure></div>
+				      <!-- /swiper-wrapper --></div>
+				    <!-- /swiper --></div>
+				<!-- /.sliderBox--typeFlow --></div>
+				<!-- スライダーここまで -->
+			<!-- /.mainVisual__flowBoxInner --></div>
+		<!-- /.mainVisual__flowBox --></div>
+		<div class="mainVisual__chachBox">
+			<h2>キャッチコピーが<br>入ります</h2>
+			<p>サブコピーもしくはジーワンシステムの簡単な紹介文が入ります。サブコピーもしくはジーワンシステムの簡単な紹介文が入ります。</p>
+		<!-- /.mainVisual__chachBox --></div>
+		<div class="mainVisual__naviBox">
+		        <div class="mainVisual__naviBox--btn">
+		        	<div class="mainVisual__naviBox__inner">
+					<div id="btnPageMainVisual01" class="mainVisual__naviBox__button"><span><img src="img/common/iconGlobalNavi01.svg" alt="買いたい" /></span><span>買いたい</span></div>
+					<div id="btnPageMainVisual02" class="mainVisual__naviBox__button"><span><img src="img/common/iconGlobalNavi02.svg" alt="売りたい" /></span><span>売りたい</span></div>
+					<div id="btnPageMainVisual03" class="mainVisual__naviBox__button"><span><img src="img/common/iconGlobalNavi03.svg" alt="借りたい" /></span><span>借りたい</span></div>
+					<div id="btnPageMainVisual04" class="mainVisual__naviBox__button"><span><img src="img/common/iconGlobalNavi04.svg" alt="任せたい" /></span><span>任せたい</span></div>
+		            <!-- /.mainVisual__naviBox__inner --></div>
+		        <!-- /.mainVisual__naviBox--btn --></div>
+		<!-- /.mainVisual__naviBox --></div>
+		<div class="mainVisual__newsBox">
+			<p>お知らせ</p>
+			<a href="#"><span>2024.00.00</span><span>テキストテキストテキストテキストテキストテキスト</span></a>
+		<!-- /.mainVisual__newsBox --></div>
+	<!-- /.mainVisual --></section>
+	
+	<div id="contents" class="clearfix">
+	<div class="inBase">
+
+		<div class="bannerHeadSp"><a href="<?php echo home_url(); ?>/admin/reason/">収益物件オーナー様・不動産オーナー様へ</a></div>
+
+		<h3 class="sectionTitle--type01"><strong>SERVICE</strong>サービス</h3>
+		<p class="sM-l tC-pc">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト<br>
+		テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+
+		<div class="homeServiceBox --typeScrollAction --typeFromLeft">
+			<div class="homeServiceBox__inner">
+				<h4>不動産購入<strong>買いたい</strong></h4>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<div class="homeServiceBox__button">
+					<a href="<?php echo home_url(); ?>/estate/reason"><span><small>テキストテキストテキストテキスト</small>私たちの強み</span></a>
+				<!-- /.homeServiceBox__button --></div>
+			<!-- /.homeServiceBox__inner --></div>
+			<figure class="homeServiceBox__inner">
+				<figure><img src="img/home/imgService01.jpg" alt="買いたい" /></figure>
+			<!-- /.homeServiceBox__inner --></figure>
+			<div class="homeServiceBox__inner">
+				<p>物件情報はこちら</p>
+				<ul>
+					<li><a href="<?php echo home_url(); ?>/properties/detachedhouse"><span>戸建て</span><img src="img/home/iconService01.svg" alt="戸建て" /></a></li>
+					<li><a href="<?php echo home_url(); ?>/properties/apartment"><span>マンション</span><img src="img/home/iconService02.svg" alt="マンション" /></a></li>
+					<li><a href="<?php echo home_url(); ?>/properties/land"><span>土地</span><img src="img/home/iconService03.svg" alt="土地" /></a></li>
+					<li><a href="<?php echo home_url(); ?>/properties/investment"><span>投資・企業向け</span><img src="img/home/iconService04.svg" alt="投資・企業向け" /></a></li>
+				</ul>
+			<!-- /.homeServiceBox__inner --></div>
+		<!-- /.homeServiceBox --></div>
+
+		<div class="homeServiceBox --typeScrollAction --typeFromRight">
+			<div class="homeServiceBox__inner">
+				<h4>不動産購入<strong>売りたい</strong></h4>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<div class="homeServiceBox__button">
+					<a href="<?php echo home_url(); ?>/company/reason"><span><small>テキストテキストテキストテキスト</small>私たちが選ばれる理由</span></a>
+				<!-- /.homeServiceBox__button --></div>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<figure><img src="img/home/imgService02.jpg" alt="売りたい" /></figure>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<p>不動産を売りたい時に<br>知っておくべき知識</p>
+				<ul class="homeServiceBox__knowledge">
+					<li><a href="<?php echo home_url(); ?>/sell/sellhigh">不動産を高く売る方法とは？</a></li>
+					<li><a href="<?php echo home_url(); ?>/sell/sellfast">マンション、戸建てを早く売る方法</a></li>
+					<li><a href="<?php echo home_url(); ?>/sell/procedure">査定から売却の流れ</a></li>
+				</ul>
+			<!-- /.homeServiceBox__inner --></div>
+		<!-- /.homeServiceBox --></div>
+
+		<div class="homeServiceBox --typeScrollAction --typeFromLeft">
+			<div class="homeServiceBox__inner">
+				<h4>賃貸<strong>借りたい</strong></h4>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<div class="homeServiceBox__button">
+					<a href="<?php echo home_url(); ?>/estate/reason"><span><small>テキストテキストテキストテキスト</small>私たちの強み</span></a>
+				<!-- /.homeServiceBox__button --></div>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<figure><img src="img/home/imgService03.jpg" alt="借りたい" /></figure>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<p>物件情報はこちら</p>
+				<ul class="homeServiceBox__search">
+					<li>
+						<a href="https://mylist-v2.realnetpro.com/14032m1/" target="_blank">一般向け<br>賃貸一覧</a>
+						<div>
+							<a href="https://www.athome.co.jp/chintai/estate/021777/list/" target="_blank">
+								<img src="img/home/imgAthome.png" alt="at home" />
+							</a>
+						</div>
+					</li>
+					<li>
+						<a href="<?php echo home_url(); ?>/properties02">事業用<br>テナント一覧</a>
+						<div>
+							<a href="https://suumo.jp/jj/chintai/ichiran/FR301FC005/?ar=050&bs=040&kkc=104717001&kc=104717001" target="_blank">
+								<img src="img/home/imgSuumo.png" alt="at home" />
+							</a>
+						</div>
+					</li>
+				</ul>
+				<p>お役立ち情報</p>
+				<ul>
+					<li><a href="<?php echo home_url(); ?>/blog/welfare">生活保護受給者向け<br>賃貸情報</a></li>
+					<li><a href="<?php echo home_url(); ?>/blog/rent">賃貸で損しない！<br>賃貸ブログ</a></li>
+				</ul>
+			<!-- /.homeServiceBox__inner --></div>
+		<!-- /.homeServiceBox --></div>
+
+		<div class="homeServiceBox --typeScrollAction --typeFromRight">
+			<div class="homeServiceBox__inner">
+				<h4>不動産管理<strong>任せる</strong></h4>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+				<div class="homeServiceBox__button">
+					<a href="<?php echo home_url(); ?>/admin/reason"><span>私たちが選ばれる理由</span></a>
+				<!-- /.homeServiceBox__button --></div>
+				<figure class="homeServiceBox__badge"><img src="img/home/imgBadge.png" alt="2500件突破!!" /></figure>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<figure><img src="img/home/imgService04.jpg" alt="任せる" /></figure>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<p>お役立ち情報</p>
+				<ul class="homeServiceBox__adminInfo">
+					<li><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a></li>
+					<li><a href="#">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</a></li>
+				</ul>
+			<!-- /.homeServiceBox__inner --></div>
+		<!-- /.homeServiceBox --></div>
+
+		<div class="homeServiceBox --typeScrollAction --typeFromLeft">
+			<div class="homeServiceBox__inner">
+				<h4>リフォーム・リノベーション<strong>快適にする</strong></h4>
+				<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<figure><img src="img/home/imgService05.jpg" alt="快適にする" /></figure></figure>
+			<!-- /.homeServiceBox__inner --></div>
+			<div class="homeServiceBox__inner">
+				<div class="homeServiceBox__button sM">
+					<a href="<?php echo home_url(); ?>/reform/about"><span>詳細ページはこちら</span></a>
+				<!-- /.homeServiceBox__button --></div>
+				<div class="homeServiceBox__button">
+					<a href="<?php echo home_url(); ?>/reform/about#reform-work"><span>施行事例</span></a>
+				<!-- /.homeServiceBox__button --></div>
+			<!-- /.homeServiceBox__inner --></div>
+		<!-- /.homeServiceBox --></div>
+
+		<div class="homeCosntentsImage --typeScrollFadeIn"><figure>
+			<img src="img/home/imgCity.jpg" alt="名古屋・東海エリアの不動産売買・賃貸・管理" />
+
+			<svg viewBox="0 0 1920 719" height="0" width="0">
+			  <defs>
+			   <clipPath id="homeCosntentsImage__cpathPath" clipPathUnits="objectBoundingBox">
+			     <path transform="scale(0.00052,0.0014)" d="M0,240L542.277,0L1920,240v479c0,0-544.668-36-960-36S0,719,0,719V240z"/>
+			   </clipPath>
+			  </defs>
+			</svg>
+		</figure><!-- /.homeCosntentsImage --></div>
+
+
+
+		<div class="background-color-white">
+
+			<div class="homeAboutBox --typeScrollFadeIn">
+				<div class="homeAboutBox__imageBox">
+					<figure class="--typeScrollFadeIn"><img src="img/home/imgAboutDeco01.jpg" alt="不動産総合プロデュース企業 株式会社ジーワンシステム" /></figure>
+					<figure class="--typeScrollFadeIn"><img src="img/home/imgAboutDeco02.jpg" alt="不動産総合プロデュース企業 株式会社ジーワンシステム" /></figure>
+					<figure class="--typeScrollFadeIn"><img src="img/home/imgAboutDeco03.jpg" alt="不動産総合プロデュース企業 株式会社ジーワンシステム" /></figure>
+					<figure class="--typeScrollFadeIn"><img src="img/home/imgAboutDeco04.jpg" alt="不動産総合プロデュース企業 株式会社ジーワンシステム" /></figure>
+					<figure class="--typeScrollFadeIn"><img src="img/home/imgAboutDeco05.jpg" alt="不動産総合プロデュース企業 株式会社ジーワンシステム" /></figure>
+				<!-- /.homeAboutBox__imageBox --></div>
+
+				<h3 class="sectionTitle--type01"><strong>ABOUT US</strong>私たちについて</h3>
+				<h4 class="lead--type01">“名古屋で豊かに暮らすお手伝い。”</h4>
+				<p>当社は不動産に関するあらゆるニーズにお応えする、<b>不動産総合プロデュース企業</b>です。<br>
+					売買、仲介、賃貸、管理をはじめ、不動産に関するあらゆるサービスを提供しております。<br>
+					<b>千種区を拠点</b>とし、名古屋を中心にこれまで多くの実績を上げてまいりました。<br>
+					どんなご相談にもご期待に添えるよう、親身に対応してまいりますので、ぜひお気軽にご相談ください。</p>
+				<div class="homeAboutBox__pointBox">
+					<div class="homeAboutBox__point">
+						<h5>テキストテキストテキスト<br>テキストテキスト</h5>
+						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<figure><span><img src="img/home/imgAbout01.jpg" alt="私たちについて" /></span></figure>
+					<!-- /.homeAboutBox__pointBox --></div>
+					<div class="homeAboutBox__point">
+						<h5>テキストテキストテキスト</h5>
+						<p>テキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+						<figure><span><img src="img/home/imgAbout02.jpg" alt="私たちについて" /></span></figure>
+					<!-- /.homeAboutBox__pointBox --></div>
+					<div class="homeAboutBox__point">
+						<h5>テキストテキスト<br>テキスト</h5>
+						<p>テキストテキストテキストテキスト</p>
+						<figure><span><img src="img/home/imgAbout03.jpg" alt="私たちについて" /></span></figure>
+					<!-- /.homeAboutBox__pointBox --></div>
+				<!-- /.homeAboutBox__pointBox --></div>
+
+				<div class="btn--type01"><a href="<?php echo home_url(); ?>/company/profile"><span>詳しく見る</span></a></div>
+			<!-- /.homeAboutBox --></div>
+
+			<div class="homeConpanyBox --typeScrollFadeIn"><div class="homeConpanyBox__inner">
+				<div class="homeConpanyBox__button">
+					<a href="#"><strong>CEO MESSAGE</strong>代表挨拶</a>
+					<figure><a href="#"><img src="img/home/imgMessage.jpg" alt="代表挨拶" /></a></figure>
+				<!-- /.homeConpanyBox__button --></div>
+				<div class="homeConpanyBox__button">
+					<a href="#"><strong>COMPANY</strong>会社概要</a>
+					<figure><a href="<?php echo home_url(); ?>/company/profile"><img src="img/home/imgCompany.jpg" alt="会社概要" /></a></figure>
+				<!-- /.homeConpanyBox__button --></div>
+			<!-- /.homeConpanyBox__inner --></div><!-- /.homeConpanyBox --></div>
+
+
+			<div class="homeBlogTitleBox --typeScrollFadeIn">
+				<p><span><img src="img/home/imgKokai.png" alt="後悔"></span>
+					して欲しくないから、<br>事前に知っておいて欲しい不動産知識
+				</p>
+				<h3>お役立ち情報</h3>
+			<!-- /.homeBlogTitleBox --></div>
+
+			<div class="homeBlogBox --typeScrollFadeIn">
+
+
+				<!-- スライダーここから -->
+				<div class="sliderBox--typeChangeSlide">
+				<!-- Slider全体のコンテナ -->
+				<div class="swiper">
+				 <!-- Sliderの内包コンテナ -->
+				<div class="swiper-wrapper">
+					<!-- Slideさせたいコンテンツ -->
+					<div class="swiper-slide">
+						<div class="homeBlogBox__inner"><a href="#">
+							<figure><img src="img/home/imgArchiveSample01.jpg" alt="サンプル画像" /></figure>
+							<div class="homeBlogBox__category"><span>ブログカテゴリー</span><span>ブログカテゴリー</span></div>
+							<p class="homeBlogBox__date">2024.00.00</p>
+							<p class="homeBlogBox__title">ブログタイトルブログタイトルブログタイトル</p>
+						</a><!-- /.homeBlogBox__inner --></div>
+					<!-- /.swiper-slide --></div>
+					<div class="swiper-slide">
+						<div class="homeBlogBox__inner"><a href="#">
+							<figure><img src="img/home/imgArchiveSample01.jpg" alt="サンプル画像" /></figure>
+							<div class="homeBlogBox__category"><span>ブログカテゴリー</span></div>
+							<p class="homeBlogBox__date">2024.00.00</p>
+							<p class="homeBlogBox__title">ブログタイトル</p>
+						</a><!-- /.homeBlogBox__inner --></div>
+					<!-- /.swiper-slide --></div>
+					<div class="swiper-slide">
+						<div class="homeBlogBox__inner"><a href="#">
+							<figure><img src="img/home/imgArchiveSample01.jpg" alt="サンプル画像" /></figure>
+							<div class="homeBlogBox__category"><span>ブログカテゴリー</span></div>
+							<p class="homeBlogBox__date">2024.00.00</p>
+							<p class="homeBlogBox__title">ブログタイトルブログタイトルブログタイトルブログタイトルブログタイトルブログタイトル</p>
+						</a><!-- /.homeBlogBox__inner --></div>
+
+					<!-- /.swiper-slide --></div>
+
+				<!-- /.swiper-wrapper --></div>
+				<!-- ナビゲーションボタン（※省略可） -->
+				<!--<div class="swiper-button-prev"></div>
+				<div class="swiper-button-next"></div>-->
+
+				<!-- /.swiper --></div>
+				<!-- Sliderここまで -->
+				<!-- /.sliderBox--typeChangeSlide --></div>
+				<!-- スライダーここまで -->
+
+			<!-- /.homeBlogBox --></div>
+
+			<div class="btn--type01"><a href="<?php echo home_url(); ?>/blog/estate"><span>詳しく見る</span></a></div>
+
+
+
+		<!-- /.background-color-white --></div>
+
+		<div class="homeCompanyInformationBox --typeScrollFadeIn">
+			<div class="homeCompanyInformationBox__inner">
+				<figure><img src="img/common/siteTitle.png" alt="名古屋・東海エリアの不動産売買・賃貸・管理ならジーワンシステム" /></figure>
+				<p><strong>本社・営業部</strong><br>
+				〒464-0074<br>名古屋市千種区仲田二丁目14番16号Ｇ1ビル池下オフィス7階<br>
+				<em>TEL.052-734-3489</em> <em>FAX.052-784-7388</em></p>
+
+				<p><strong>管理部</strong><br>
+				G1ビル池下オフィス6階<br>
+				<em>TEL.052-734-3489</em> <em>FAX.052-784-7388</em><br>
+				営業時間：AM10:00~PM5:15<br>
+				許可番号 宅地建物取引業 <span>愛知県知事（5）第19153号</span>
+				</p>
+			<!-- /.homeCompanyInformationBox__inner --></div>
+			<div class="homeCompanyInformationBox__image"><figure><img src="img/common/imgFooter.jpg" alt="不動産総合プロデュース企業 株式会社ジーワンシステム" /></figure></div>
+		<!-- /.homeCompanyInformationBox --></div>
+
+		<div class="bottomMapBox --typeScrollFadeIn">
+			<div class="googleMapBox">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6523.007746985051!2d136.94260100000002!3d35.168992!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600370f5b62d597f%3A0x59134dc66438ba72!2z44ix44K444O844Ov44Oz44K344K544OG44Og77yI5Y2D56iu5Yy644Gu5LiN5YuV55Sj77yJ!5e0!3m2!1sja!2sjp!4v1732174984832!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<!-- /.googleMapBox --></div>
+		<!-- /.bottomMapBox --></div>
+
+    	<!-- /.inBase --></div>
+	
+
+
+
+
+
+        
+	<!-- /#contents --></div>
+
+	
+	<footer id="footer">
+		<div class="inBase"><div class="inBase__inner clearfix">
+			<div class="footer__inner">
+				<div class="footer__naviBox">
+					<p>買いたい</p>
+					<ul class="footer__navi">
+						<li><span>物件情報</span>
+							<ul>
+								<li><a href="<?php echo home_url(); ?>/properties/detachedhouse">戸建て</a>
+								<li><a href="<?php echo home_url(); ?>/properties/apartment">中古マンション</a>
+								<li><a href="<?php echo home_url(); ?>/properties/land">土地</a>
+								<li><a href="<?php echo home_url(); ?>/properties/investment">企業向け投資物件</a>
+								<li><a href="<?php echo home_url(); ?>/contact02">店舗</a>
+							</ul>
+						</li>
+						<li><a href="<?php echo home_url(); ?>/estate/procedure">購入の流れ</a></li>
+						<li><a href="<?php echo home_url(); ?>/estate/reason">当社の強み</a></li>
+						<li><a href="<?php echo home_url(); ?>/estate/qa">よくあるご質問</a></li>
+					</ul>
+					
+				<!-- /.footer__naviBox --></div>
+				<div class="footer__naviBox">
+					<p>売りたい</p>
+					<ul class="footer__navi">
+						<li><a href="<?php echo home_url(); ?>/company/reason">私たちが選ばれる理由</a></li>
+						<li><a href="<?php echo home_url(); ?>/sell/sellhigh">不動産を高く売る方法</a></li>
+						<li><a href="<?php echo home_url(); ?>/sell/sellfast">マンション、戸建を早く売る方法</a></li>
+						<li><a href="<?php echo home_url(); ?>/sell/procedure">査定から売却の流れ</a></li>
+						<li><a href="<?php echo home_url(); ?>/sell/qa">よくあるご質問</a></li>
+					</ul>
+					
+				<!-- /.footer__naviBox --></div>
+				<div class="footer__naviBox">
+					<p>借りたい</p>
+					<ul class="footer__navi">
+						<li><span>物件情報</span>
+							<ul>
+								<li><a href="https://mylist-v2.realnetpro.com/14032m1/" target="_blank">一般向け賃貸一覧</a>
+								<li><a href="<?php echo home_url(); ?>/properties02">事業者向けテナント一覧</a>
+							</ul>
+						</li>
+						<li><a href="<?php echo home_url(); ?>/rent/procedure">賃貸契約の流れ</a></li>
+					</ul>
+					
+				<!-- /.footer__naviBox --></div>
+				<div class="footer__naviBox">
+					<p>管理依頼</p>
+					<ul class="footer__navi">
+						<li><a href="<?php echo home_url(); ?>/admin/reason">私たちが選ばれる理由</a></li>
+						<li><a href="<?php echo home_url(); ?>/admin/procedure">管理依頼の流れ</a></li>
+						<li><a href="<?php echo home_url(); ?>/admin/qa">よくあるご質問</a></li>
+					</ul>
+					<p><a href="<?php echo home_url(); ?>/reform/about">リフォーム</a></p>
+				<!-- /.footer__naviBox --></div>
+				<div class="footer__naviBox">
+					<ul class="footer__navi">
+						<li><a href="#">代表挨拶</a></li>
+						<li><a href="<?php echo home_url(); ?>/company/profile">会社概要</a></li>
+						<li><a href="<?php echo home_url(); ?>/blog/estate">お役立ちブログ</a></li>
+						<li><a href="<?php echo home_url(); ?>/company/privacy-policy">プライバシーポリシー</a></li>
+					</ul>
+				<!-- /.footer__naviBox --></div>
+            		<!-- /.footer__inner --></div>
+
+			<small class="copyright">&copy; 2024 株式会社ジーワンシステム. All Rights Reserved.</small>
+
+		<!-- /.inBase__inner --></div><!-- /.inBase --></div>
+	<!-- /#footer --></footer>
+
+        
+	<p id="btnRise"><a href="#wrapper"><img src="img/common/iconButton03.svg" alt="上に戻る" /></a></p>
+	  
+	<div id="btnTelEmpty"></div>
+    
+    
+	<div id="btnPageBottom">
+	        <div class="btnPageBottom--btn">
+	        	<div class="btnPageBottom__inner">
+				<div id="btnPageBottom01" class="btnPageBottom__button"><span><img src="img/common/iconGlobalNavi01.svg" alt="買いたい" class="wide" /></span><span>買いたい</span></div>
+				<div id="btnPageBottom02" class="btnPageBottom__button"><span><img src="img/common/iconGlobalNavi02.svg" alt="売りたい" class="wide" /></span><span>売りたい</span></div>
+				<div id="btnPageBottom03" class="btnPageBottom__button"><span><img src="img/common/iconGlobalNavi03.svg" alt="借りたい" class="wide" /></span><span>借りたい</span></div>
+				<div id="btnPageBottom04" class="btnPageBottom__button"><span><img src="img/common/iconGlobalNavi04.svg" alt="任せたい" class="wide" /></span><span>任せたい</span></div>
+	            <!-- /.btnPageBottom--type01__inner --></div>
+	        <!-- /.btnPageBottom--btn --></div>
+	<!-- /#btnPageBottom --></div>
+	
+	
+
+	<!-- 買いたい　スマホページ下部固定ナビの内容ここから -->
+	<div class="modal micromodal-slide" id="modal-btnPageBottom01" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div id="btnClosePageBottom01" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+				<div class="globalNaviSmall__iconButton">
+					<span class="iconButton--top"></span>
+					<span class="iconButton--middle"></span>
+					<span class="iconButton--bottom"></span>
+				</div>
+			</div>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-btnPageBottom01-labelledby">
+
+				<div class="globalNaviSmall__menu" id="modal-btnPageBottom01-labelledby">
+					<div class="globalNaviSmall__menu__inner">
+						<ul class="globalNaviSmall__menu__main">
+							<li><span>買いたい</span>
+								<ul class="globalNaviSmall__menu__sub">
+									<li><span>物件情報</span>
+										<ul class="globalNaviSmall__menu__sub">
+											<li><a href="<?php echo home_url(); ?>/properties/detachedhouse">戸建て</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties/apartment">中古マンション</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties/land">土地</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties/investment">投資、企業向け</a></li>
+											<li><a href="<?php echo home_url(); ?>/contact02">店舗・事務所</a></li>
+										</ul>
+									</li>
+									<li><a href="<?php echo home_url(); ?>/properties">販売中の情報一覧</a></li>
+									<li><a href="<?php echo home_url(); ?>/estate/procedure">マンション、戸建て購入の流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/estate/reason">当社仕入れ不動産が、選ばれる理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/estate/qa">マンション、戸建て購入時によくあるご質問</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/estate">マンション、戸建て購入で読んでおきたいブログ</a></li>
+								</ul> 
+							</li>
+						</ul>
+					<!-- /.globalNaviSmall__menu__inner --></div>
+				<!-- /.globalNaviSmall__menu --></div>
+
+			<!-- /.modal__container --></div>
+		<!-- /.modal__overlay --></div>
+	<!-- /#modal-btnPageBottom01 --></div>
+	<!-- 買いたい　スマホページ下部固定ナビの内容ここまで -->
+
+	<!-- 売りたい　スマホページ下部固定ナビの内容ここから -->
+	<div class="modal micromodal-slide" id="modal-btnPageBottom02" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div id="btnClosePageBottom02" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+				<div class="globalNaviSmall__iconButton">
+					<span class="iconButton--top"></span>
+					<span class="iconButton--middle"></span>
+					<span class="iconButton--bottom"></span>
+				</div>
+			</div>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-btnPageBottom02-labelledby">
+
+				<div class="globalNaviSmall__menu" id="modal-btnPageBottom02-labelledby">
+					<div class="globalNaviSmall__menu__inner">
+						<ul class="globalNaviSmall__menu__main">
+							<li><span>売りたい</span>
+								<ul class="globalNaviSmall__menu__sub">
+									<li><a href="<?php echo home_url(); ?>/sell/reason">不動産売却で選ばれている理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/sellhigh">不動産を高く売る方法</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/sellfast">マンション、戸建てを早く売る方法</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/case">買取実績</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/procedure">査定から売却までの流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/qa">売却時によくあるご質問</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/sell">不動産を売りたい時に読んでおきたいブログ</a></li>
+									<li><a href="<?php echo home_url(); ?>/sell/contact">思いを叶える売却相談</a></li>
+								</ul> 
+							</li>
+						</ul>
+					<!-- /.globalNaviSmall__menu__inner --></div>
+				<!-- /.globalNaviSmall__menu --></div>
+
+			<!-- /.modal__container --></div>
+		<!-- /.modal__overlay --></div>
+	<!-- /#modal-btnPageBottom02--></div>
+	<!-- 売りたい　スマホページ下部固定ナビの内容ここまで -->
+
+	<!-- 借りたい　スマホページ下部固定ナビの内容ここから -->
+	<div class="modal micromodal-slide" id="modal-btnPageBottom03" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div id="btnClosePageBottom03" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+				<div class="globalNaviSmall__iconButton">
+					<span class="iconButton--top"></span>
+					<span class="iconButton--middle"></span>
+					<span class="iconButton--bottom"></span>
+				</div>
+			</div>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-btnPageBottom03-labelledby">
+
+				<div class="globalNaviSmall__menu" id="modal-btnPageBottom03-labelledby">
+					<div class="globalNaviSmall__menu__inner">
+						<ul class="globalNaviSmall__menu__main">
+							<li><span>借りたい</span>
+								<ul class="globalNaviSmall__menu__sub">
+									<li><span>物件情報</span>
+										<ul class="globalNaviSmall__menu__sub">
+											<li><a href="https://mylist-v2.realnetpro.com/14032m1/" target="_blank">賃貸一覧</a></li>
+											<li><a href="<?php echo home_url(); ?>/properties02">テナント・事業用賃貸</a></li>
+										</ul>
+									</li>
+									<li><a href="<?php echo home_url(); ?>/rent/reason">不動産賃貸で選ばれている理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/rent/procedure">賃貸契約の流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/welfare">生活保護受給者向け賃貸情報</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/rent">賃貸で損しない！賃貸ブログ情報</a></li>
+								</ul> 
+							</li>
+						</ul>
+					<!-- /.globalNaviSmall__menu__inner --></div>
+				<!-- /.globalNaviSmall__menu --></div>
+
+			<!-- /.modal__container --></div>
+		<!-- /.modal__overlay --></div>
+	<!-- /#modal-btnPageBottom03 --></div>
+	<!-- 借りたい　スマホページ下部固定ナビの内容ここまで -->
+
+	<!-- 任せたい　スマホページ下部固定ナビの内容ここから -->
+	<div class="modal micromodal-slide" id="modal-btnPageBottom04" aria-hidden="true">
+		<div class="modal__overlay" tabindex="-1" data-micromodal-close>
+			<div id="btnClosePageBottom04" class="globalNaviSmall__icon globalNaviSmall__icon--type01">
+				<div class="globalNaviSmall__iconButton">
+					<span class="iconButton--top"></span>
+					<span class="iconButton--middle"></span>
+					<span class="iconButton--bottom"></span>
+				</div>
+			</div>
+			<div class="modal__container" role="dialog" aria-modal="true" aria-labelledby="modal-btnPageBottom04-labelledby">
+
+				<div class="globalNaviSmall__menu" id="modal-btnPageBottom04-labelledby">
+					<div class="globalNaviSmall__menu__inner">
+						<ul class="globalNaviSmall__menu__main">
+							<li><span>任せたい</span>
+								<ul class="globalNaviSmall__menu__sub">
+									<li><a href="<?php echo home_url(); ?>/admin/reason">マンション管理で選ばれている理由</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/procedure">管理依頼の流れ</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/contact">まずは、今の管理会社とご比較を　ご質問フォーム</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/qa">マンション、アパート管理でよくあるご質問</a></li>
+									<li><a href="<?php echo home_url(); ?>/blog/admin">マンション管理ブログ</a></li>
+									<li><a href="<?php echo home_url(); ?>/admin/contact">高リピート率の管理担当者に相談する</a></li>
+								</ul> 
+							</li>
+						</ul>
+					<!-- /.globalNaviSmall__menu__inner --></div>
+				<!-- /.globalNaviSmall__menu --></div>
+
+			<!-- /.modal__container --></div>
+		<!-- /.modal__overlay --></div>
+	<!-- /#modal-btnPageBottom04 --></div>
+	<!-- 任せたい　スマホページ下部固定ナビの内容ここまで -->
+	
+
+
+
+
+
+
+	<div id="btnSideBanner" class="sideBannerBox is-active">
+    		<div class="sideBannerBox__banner"><a href="<?php echo home_url(); ?>/estate/contact"><span>不動産購入のご相談</span></a></div>
+    		<div class="sideBannerBox__banner"><a href="<?php echo home_url(); ?>/sell/contact"><span>不動産売却のご相談</span></a></div>
+    		<div class="sideBannerBox__banner"><a href="<?php echo home_url(); ?>/admin/contact"><span>不動産管理のご相談</span></a></div>
+    		<div class="sideBannerBox__banner"><a href="<?php echo home_url(); ?>/rent/contact"><span>賃貸のご相談</span></a></div>
+	<!-- /.sideBannerBox --></div>
+<!-- /#wrapper --></div>
+
+</body>
+</html>
+
+<script data-main="js/main" src="js/require.js"></script>

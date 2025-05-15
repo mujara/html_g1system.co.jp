@@ -1,0 +1,879 @@
+@use "../_setting" as s;
+
+.inBase__inner {
+	width: 100%;
+	margin-left:auto;
+	margin-right:auto;
+	display:block;
+	@include s.media(m){
+		width: 90%;
+	}
+	&::after {
+		content:" ";
+		display:block;
+		clear:both;
+	}
+}
+.fullWide {
+	margin: 0 calc(50% - 50vw);
+	width: 100vw;
+}
+
+// #pageBox等　ナビ上部固定の分　ページリンクのずれ補正
+@mixin cureGap($value:4em){
+	margin-top:-$value;
+	padding-top:$value;
+}
+
+#contents {
+	opacity:1;
+	transition:all .3s ease;
+	@include s.media(m){
+		@include cureGap();
+	}
+}
+
+body.ba-white {
+	background:#FFF;
+}
+body.ba-white #contents,
+body.ba-white #content,
+body.home.ba-white #wrapper .mainVisual,
+body.ba-white #footer{
+	opacity:0;
+}
+
+#content {
+	padding-top:7em;
+	opacity:1;
+	transition:all .3s ease;
+	@include s.media(m){
+		@include cureGap();
+		padding-top:8em;
+	}
+}
+.linkAdjustment{
+	@include s.media(m){
+		@include cureGap();
+	}
+}
+
+$tmp:"";
+@for $i from 1 through 15{
+	@if $i < 10{
+		$tmp:"0#{$i}";
+	} @else {
+		$tmp: $i;
+	}
+	#pageBox#{$tmp} {
+		@include s.media(m){
+			@include cureGap();
+		}
+	}
+}
+
+// z-index 要素の重なり順
+@mixin z-index($key){
+	z-index:map-get(s.$layer, $key);
+}
+.modal{
+	@include z-index(modal);
+}
+.header{
+	@include z-index(header);
+}
+.tooltip{
+	@include z-index(tooltip);
+}
+.default{
+	@include z-index(default);
+}
+
+// アンダーラインアニメーション　mixin
+@mixin hover-underline($type: fade, $dir: null, $weight: 2px, $color: #32342D) {
+  @if $dir == null {
+    @if $type == fade {
+      $dir: 'top';
+    } @else if $type == slide {
+      $dir: 'center';
+    }
+  }
+
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  &::after {
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: $weight;
+    background: $color;
+    @if $type == fade {
+      transition: .3s;
+      opacity: 0;
+      visibility: hidden;
+      @if $dir == bottom {
+        bottom: $weight * -4;
+      } @else {
+        bottom: $weight;
+      }
+    } @else if $type == slide {
+      bottom: $weight * -2;
+      transform: scale(0, 1);
+      transition: transform .3s;
+      @if $dir == left-right or $dir == right-in-left {
+        transform-origin: left top;
+      } @else if $dir == right-left or $dir == left-in-right {
+        transform-origin: right top;
+      } @else {
+        transform-origin: center top;
+      }
+    }
+  }
+  &:hover::after {
+    @if $type == fade {
+      bottom: $weight * -2;
+      opacity: 1;
+      visibility: visible;
+    } @else if $type == slide {
+      @if $dir == left-in-right {
+        transform-origin: left top;
+      } @else if $dir == right-in-left {
+        transform-origin: right top;
+      }
+      transform: scale(1, 1);
+    }
+  }
+}
+
+.link{
+	// Fade Top
+	&--typeFadeTop a{
+		@include hover-underline('fade', 'top');
+  	}
+  	// Fade Bottom
+	&--typeFadeBottom a {
+		@include hover-underline('fade', 'bottom');
+	}
+  	// Left to Right
+	&--typeLeftToRight a {
+		@include hover-underline('slide', 'left-right');
+	}
+  	// Right to Left
+	&--typeRightToLeft a {
+	 	@include hover-underline('slide', 'right-left');
+	}
+  	// Left in Right
+	&--typeLeftInRight a {
+		@include hover-underline('slide', 'left-in-right');
+	}
+  	// Right in Left
+	&--typeRightInLeft a {
+		@include hover-underline('slide', 'right-in-left');
+	}
+  	// Center
+	&--typeCenter a {
+		@include hover-underline('slide', 'center');
+	}
+}
+
+// ----------------------------------------------
+
+.pagefixed {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+}
+
+.center-box{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+#pageTopFix.is-scroll{
+	@include s.media(m){
+		opacity: 1;
+		background: rgba(255,255,255,1);
+		z-index:2;
+		overflow:hidden;
+	}
+}
+
+#btnTelEmpty{
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+	@include s.media(m){
+		display: none;
+	}
+	&:before{
+		content: "";
+		display: block;
+		padding-top: 19%;
+	}
+}
+
+.parallaxBox{
+	min-height:17em;
+	display:block;
+	padding:3.6rem 0 0;
+	position: relative;
+}
+
+.copyright {
+	display:block;
+	text-align:center;
+	padding:2em 0;
+	font-size:0.8em;
+	@include s.fontType02(Medium);
+	border-top:#FFF solid 1px;
+	color:#FFF;
+}
+
+#wrapper #btnRise {
+	display:block;
+	opacity: 0;
+	transition-duration: 0.5s;
+	position: fixed;
+	bottom: 7em;
+	right: 1em;
+	opacity:0;
+	z-index:2;
+	@include s.media(m){
+		bottom: 1em;
+	}
+	&.is-active{
+		opacity:1;
+	}
+	a {
+		display:block;
+		width:3em;
+		height:3em;
+		background:#FFF;
+		border-radius:50%;
+		@include s.media(m){
+			width:4em;
+			height:4em;
+		}
+		transform:rotate(-90deg);
+		img{
+			width:100%;
+		}
+		&:hover{
+			background:s.$colorType06;
+		}
+	}
+}
+
+
+
+#wrapper .sideBannerBox{
+	display:none;
+	transition:all .3s ease;
+	@include s.media(m){
+		display:inline-block;
+		position:fixed;
+		z-index:999;
+		z-index:3;
+		top:0;
+		right:0;
+	}
+	&.is-active{
+		@include s.media(m){
+			top:4em;
+		}
+	}
+	&__banner{
+  		-ms-writing-mode: tb-rl;
+  		writing-mode: vertical-rl;
+			display:block;
+		width:3em;
+		a{
+			font-size:0.9em;
+			width:3.5em;
+			display:inline-block;
+			position:relative;
+	  		text-decoration:none;
+			@include s.fontType01(Bold);
+			letter-spacing:0.1em;
+			position:relative;
+			padding:1em 0.9em;
+			opacity:1;
+			line-height:1.7;
+			&:hover{
+				color:s.$colorType03;
+				opacity:1;
+				&::before{
+					width:0;
+				}
+				&::after{
+					right:0;
+				}
+			}
+		}
+		&:nth-child(1){
+			a{
+				background:#7BAD00;
+				color:#FFF;
+				&:hover{
+					background:s.$colorType04;
+				}
+			}
+		}
+		&:nth-child(2){
+			a{
+				background:#96D300;
+				color:#FFF;
+				&:hover{
+					background:s.$colorType04;
+				}
+			}
+		}
+		&:nth-child(3){
+			a{
+				background:#C7EF65;
+				color:#719519;
+				&:hover{
+					background:s.$colorType04;
+					color:#FFF;
+				}
+			}
+		}
+		&:nth-child(4){
+			a{
+				background:#EAF8C9;
+				color:#719519;
+				&:hover{
+					background:s.$colorType04;
+					color:#FFF;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+.luminous,.luminousGallery{
+	position:relative;
+	display:block;
+	&:after {  
+		-webkit-transition: 0.3s ease-in-out;  
+	    -moz-transition: 0.3s ease-in-out;  
+	    -o-transition: 0.3s ease-in-out;  
+	    transition: 0.3s ease-in-out;
+		 filter: alpha(opacity=0);
+		 -moz-opacity: 0;
+		 opacity: 0;
+		font-family: "icomoon";
+		content:"\f00e";
+		font-size:1.5rem;
+		color:#FFF;
+		background: rgba(0,0,0,0.3);
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		display: -webkit-flex;
+		 display: flex;
+		 -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+		 align-items: center; /* 縦方向中央揃え */
+		 -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+		 justify-content: center; /* 横方向中央揃え */
+		text-align:center;
+		@include s.media(m){
+			font-size:3rem;
+		}
+	}
+	&:hover:after {
+		 filter: alpha(opacity=90);
+		 -moz-opacity: 0.9;
+		 opacity: 0.9;
+	}
+}
+
+
+.movieButton{
+	position:relative;
+	display:block;
+	cursor:pointer;
+	&:after {  
+		-webkit-transition: 0.3s ease-in-out;  
+	    -moz-transition: 0.3s ease-in-out;  
+	    -o-transition: 0.3s ease-in-out;  
+	    transition: 0.3s ease-in-out;
+		 filter: alpha(opacity=0);
+		 -moz-opacity: 0;
+		 opacity: 0;
+		font-family: "icomoon";
+		content:"\f16a";
+		font-size:1.5rem;
+		color:#FFF;
+		background: rgba(0,0,0,0.3);
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		display: -webkit-flex;
+		 display: flex;
+		 -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+		 align-items: center; /* 縦方向中央揃え */
+		 -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+		 justify-content: center; /* 横方向中央揃え */
+		text-align:center;
+		@include s.media(m){
+			font-size:3rem;
+		}
+	}
+	&:hover:after {
+		 filter: alpha(opacity=90);
+		 -moz-opacity: 0.9;
+		 opacity: 0.9;
+	}
+}
+
+.inlineModalButton{
+	position:relative;
+	display:block;
+	cursor:pointer;
+	&:after {  
+		-webkit-transition: 0.3s ease-in-out;  
+	    -moz-transition: 0.3s ease-in-out;  
+	    -o-transition: 0.3s ease-in-out;  
+	    transition: 0.3s ease-in-out;
+		 filter: alpha(opacity=0);
+		 -moz-opacity: 0;
+		 opacity: 0;
+		font-family: "icomoon";
+		content:"\f0c1";
+		font-size:1.5rem;
+		color:#FFF;
+		background: rgba(0,0,0,0.3);
+		width:100%;
+		height:100%;
+		position:absolute;
+		top:0;
+		left:0;
+		display: -webkit-flex;
+		 display: flex;
+		 -webkit-align-items: center; /* 縦方向中央揃え（Safari用） */
+		 align-items: center; /* 縦方向中央揃え */
+		 -webkit-justify-content: center; /* 横方向中央揃え（Safari用） */
+		 justify-content: center; /* 横方向中央揃え */
+		text-align:center;
+		@include s.media(m){
+			font-size:3rem;
+		}
+	}
+	&:hover:after {
+		 filter: alpha(opacity=90);
+		 -moz-opacity: 0.9;
+		 opacity: 0.9;
+	}
+}
+
+// インライン表示のスクロールバー
+.modal-inlineContent .inline__display::-webkit-scrollbar {
+    width: 10px;
+}
+ // スクロールバーの背景
+.modal-inlineContent .inline__display::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.3);
+}
+ // スクロールバーのバー
+.modal-inlineContent .inline__display::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.6);
+}
+
+// Firefox に対応した スクロールバーデザイン
+.modal-inlineContent .inline__display {
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(0,0,0,0.6) rgba(0,0,0,0.3);
+}
+
+.adjustBox {
+	position: relative;
+	width: 100%;
+	height: auto;
+	overflow:hidden;
+	&:before {
+		content: "";
+		display: block;
+		padding-top: 100%; /* 1:1 */
+	}
+	&.adjustBox {
+		&--type01:before {
+			padding-top: 175%; /* 4:7 */
+		}
+		&--type02:before {
+			padding-top: 150%; /* 2:3 */
+		}
+		&--type03:before {
+			padding-top: 125%; /* 3:4 */
+		}
+		&--type04:before {
+			padding-top: 75%; /* 4:3 */
+		}
+		&--type05:before {
+			padding-top: 50%; /* 2:1 */
+		}
+		&--type06:before {
+			padding-top: 25%; /* 4:1 */
+		}
+		&--typeGR:before {
+			padding-top: 61.74%; /* 1.618:1 */
+		}
+		&--typeGR-h:before {
+			padding-top: 161.8%; /* 1:1.618 */
+		}
+	}
+	&__inner {
+		position: absolute;
+		top: 0; 
+		left: 0;
+		width: 100%;
+		height: 100%;
+		img {
+			position: relative;
+			top: 50%;
+			-moz-transform: translateY(-50%);
+			-ms-transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			&.h100{
+			  position: absolute;
+			  width: 100%;
+			  height: 100%;
+			  top: 0;
+			  right: 0;
+			  bottom: 0;
+			  left: 0;
+			  margin: auto;
+			  object-fit: cover;
+			  -moz-transform: none;
+			  -ms-transform: none;
+			  -webkit-transform: none;
+			  transform: none;
+			}
+		}
+	}
+	p {
+	    font-size:1.25vw;
+	    line-height:1.5em;
+	}
+}
+
+.googleMapBox{
+	position: relative;
+	padding-bottom: 75%;
+	height: 0;
+	overflow: hidden;
+	@include s.media(m){
+		padding-bottom: 50%;
+	}
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}
+
+.youtubeBox{
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+	display:block;
+	iframe {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
+
+.modal-movie{
+	.modal__container{
+		width:95%;
+		padding:0.5em;
+		@include s.media(m){
+			padding:1em;
+		}
+		@include s.media(xl){
+  			max-width:854px;
+		}
+	}
+}
+
+#btnPageBottom{
+	width:100%;
+    	position: fixed;
+    	bottom: 0;
+    	left: 0;
+	z-index:-1;
+	opacity: 0;
+	transition-duration: 0.5s;
+	display: block;
+	@include s.media(m){
+		display: none;
+		_display: none;
+	}
+	&.is-active{
+		z-index:989;
+		opacity: 1;
+		box-shadow: 0px 0px 0.3em 0.1em rgba(0, 0, 0, 0.2);
+	}
+}
+
+.btnPageBottom{
+	&--btn{
+		@include s.media(m){
+			display:none;
+		}
+	}
+	&__inner{
+		width:100%;
+		display:flex;
+		>div{
+			width:25%;
+			display:block;
+			background:#FFF;
+			text-align:center;
+			padding:0.5em 0;
+			span{
+				display:block;
+				@include s.fontType01(Bold);
+			}
+			img{
+				width:3em;
+				height:auto;
+			}
+		}
+	}
+}
+
+
+
+// スマホ下部固定　モーダル設定
+.modal#modal-btnPageBottom01,.modal#modal-btnPageBottom02,.modal#modal-btnPageBottom03,.modal#modal-btnPageBottom04 {
+	z-index:889;
+	.modal__overlay{
+		margin-top:7em;
+		margin-top:15em;
+	}
+	.modal__container{
+		margin-top:6em;
+		//overflow: visible;
+	}
+}
+
+#modal-btnPageBottom01,#modal-btnPageBottom02,#modal-btnPageBottom03,#modal-btnPageBottom04{
+	.globalNaviSmall__icon{
+		top:-15em;
+	}
+	.modal__overlay {
+		background: none;
+	}
+	.modal__container {
+		background:rgba(255,255,255,1);
+		width:100%;
+		max-width: 100%;
+		border-radius: 0;
+  		padding: 0;
+		min-height: 100vh;
+	}
+	.globalNaviSmall__menu__main{
+		margin-bottom:12em;
+		padding-bottom:1em;
+	}
+}
+
+#wrapper .fadeParts {
+	opacity: 0;
+	transition: 0.5s;
+}
+
+#wrapper .fadeParts.active {
+	opacity: 1;
+}
+
+
+
+#wrapper .sectionTitle--type01{
+	display:block;
+	text-align:center;
+	font-size:1.1em;
+	color:s.$colorType03;
+	@include s.fontType01(Bold);
+	margin-bottom:1.5em;
+	@include s.media(m){
+		font-size:1.25em;
+	}
+	strong{
+		display:block;
+		font-size:2em;
+		color:s.$colorType02;
+		@include s.fontType02(Medium);
+		line-height:1.1;
+		@include s.media(m){
+			font-size:3em;
+		}
+	}
+}
+
+#wrapper .lead--type01{
+	font-size:1.3em;
+	@include s.fontType01(Bold);
+	display:block;
+	text-align:center;
+	margin-bottom:1em;
+	letter-spacing:0.1em;
+	@include s.media(m){
+		font-size:2.5em;
+	}
+}
+
+#wrapper .btn--type01{
+	text-align:center;
+	a{
+		display:inline-block;
+		box-shadow: 0 0.3em 1em -0.8em rgba(0, 0, 0, 1);
+		span{
+			display:block;
+			background:s.$colorType02;
+			clip-path: polygon(1em 0, 100% 0, 100% 100%, 0 100%, 0 1em);
+			color:#FFF;
+			text-align:center;
+			font-size:1em;
+			@include s.fontType01(Bold);
+			position:relative;
+			padding:0.6em 3em 0.6em;
+			transition:all .3s ease;
+	    		-webkit-transition: all .3s ease;
+			@include s.media(m){
+				font-size:0.9em;
+			}
+			&::before {
+				content:"";
+				display:block;
+				width:1em;
+				height:1em;
+				background:url(../img/common/iconButton01.svg) no-repeat center top;
+				background-size:100% auto;
+				position:absolute;
+				top:50%;
+				right:1em;
+				margin-top:-0.5em;
+				transition:all .3s ease;
+			    	-webkit-transition: all .3s ease;
+				@include s.media(m){
+					right:1em;
+				}
+	                }
+		}
+		&:hover{
+			span{
+				background:s.$colorType04;
+				&::before {
+					right:0.8em;
+			        }
+			}
+			box-shadow: -0.5em 0px 1em -0.5em rgba(0, 0, 0, 0);
+		}
+		small{
+			display:block;
+			font-size:0.7em;
+			@include s.fontType01(Medium);
+		}
+	}
+}
+
+
+// .tabBox--type01
+.tabBox--type01 {
+  	display: block;
+  	&__button{
+		@include s.fontType01(Bold);
+  		border-right:#CCC solid 0.5px;
+  		border-left:#FFF solid 0.5px;
+  		width: calc(100%/2);
+  		background-color: #DDD;
+  		font-size: 1.1em;
+  		text-align: center;
+  		color: #565656;
+  		display: block;
+  		float: left;
+		transition: all 0.5s ease;
+		cursor :pointer;
+  		padding: s.$spaceSize calc(s.$spaceSize/2);
+		@include s.media(m){
+  			width: calc(100%/2);
+  			font-size: 1.2em;
+  			padding: s.$spaceSize;
+		}
+		&:hover{
+			opacity: 0.5;
+		}
+	}
+	input[name="tabBox--type01__button"] {
+		display: none;
+	}
+	&__content{
+	  	clear: both;
+	  	overflow: hidden;
+	  	padding: calc(s.$spaceSize/2) s.$spaceSize;
+		//border:#808080 solid 1px;
+		background:#FFF;
+  		border-top:s.$colorType04 solid 3px;
+		transition: .4s;
+		display:none;
+		@include s.media(m){
+	    	padding: s.$spaceSize s.$spaceSize*2;
+		}
+		.form{
+			display:block;
+			margin-top:1.5em;
+			@include s.media(m){
+				margin-top:4em;
+			}
+			.submit p{
+				margin-bottom:0;
+			}
+		}
+	}
+	//選択されているタブのコンテンツのみを表示
+	#tabBox--type01__label001:checked ~ #tabBox--type01__label001__content,
+	#tabBox--type01__label002:checked ~ #tabBox--type01__label002__content,
+	#tabBox--type01__label003:checked ~ #tabBox--type01__label003__content {
+		display:block;
+		animation-name: tabBox--type01--fade;
+		animation-duration: 1s;
+	}
+	//選択されているタブのスタイルを変える
+	input:checked + .tabBox--type01__button {
+	  	background-color: s.$colorType04;
+	  	color: #fff;
+		pointer-events:none;
+	}
+	input:checked + .tabBox--type01__button:hover {
+		opacity: 1;
+	}
+}
+
+@keyframes tabBox--type01--fade{
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

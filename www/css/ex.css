@@ -1,0 +1,2600 @@
+@charset "utf-8";
+
+
+/* スマホ用CSS　横幅768px以下で適用するCSS-----------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------- */
+
+@media screen and (max-width: 768px){
+	.admin-badge{
+		width:8em;
+		display:block;
+		position:absolute;
+		top:11.5em;
+		right:-2em;
+	}
+
+	/* 管理業務下層トップ */
+
+	.term-153 .page-title{
+		padding: 0;
+		margin: 0;
+		height: calc((300 / 1080) * 100vw);
+		line-height: calc((300 / 1080) * 100vw);
+		font-size: calc((60 / 1080) * 100vw);
+		font-family: 'Noto Serif JP', serif;
+		background-color: #fff;
+		background: url(https://www.g1system.co.jp/images/adminsp/admin-page-title-bg.png) no-repeat center 0;
+		-webkit-background-size: cover;
+		background-size: cover;
+	}
+	.term-153 #content-inner{
+		padding-bottom: 0;
+	}
+	#admin-main{
+		width:112%;
+		display:block;
+		margin-left:-6%;
+		text-align: center;
+	}
+	.admin-mainimage{
+	}
+
+	.admin-rate{
+		margin: 0 auto 5vw;
+		padding-left: calc((50 / 1080) * 100vw);
+		height: calc((120 / 1080) * 100vw);
+		background: #ffb321;
+		color: #fff;
+		font-size: calc((42 / 1080) * 100vw);
+		font-weight: 900;
+	}
+	.admin-rate .once{
+		margin-right: 1em;
+	}
+	.admin-rate .rate01{
+		margin: 0 0.2em;
+		color: #db4c53;
+		font-size: calc((80 / 1080) * 100vw);
+	}
+	.admin-rate .rate02{
+		margin: 0 5vw 0 0.2em;
+		color: #db4c53;
+		font-size: calc((80 / 1080) * 100vw);
+	}
+	.admin-rate .percent{
+		font-size: calc((54 / 1080) * 100vw);
+	}
+	.admin-rate .date{
+		font-size: calc((12 / 1080) * 100vw);
+		font-weight: normal;
+	}
+	.admin-trouble{
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+	}
+	.admin-trouble-title{
+		margin-bottom: calc((70 / 1080) * 100vw);
+		color: #258b3e;
+		font-size: calc((60 / 1080) * 100vw);
+		font-weight: bold;
+		line-height: 1.4;
+		background: url(https://www.g1system.co.jp/images/adminsp/admin-common-title-bg.png) no-repeat center bottom;
+		-webkit-background-size: 100% auto;
+		background-size: 100% auto;
+	}
+	.admin-trouble-subtitle{
+		margin-bottom: calc((30 / 1080) * 100vw);
+		padding-top: calc((40 / 1080) * 100vw);
+		padding-left: calc((48 / 1080) * 100vw);
+		width: 100%;
+		height: calc((216 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+		font-weight: bold;
+		text-align: left;
+		line-height: 1.3;
+		background: url(https://www.g1system.co.jp/images/adminsp/admin-trouble-subtitle-bg.png) no-repeat center 0;
+		-webkit-background-size: 100% auto;
+		background-size: 100% auto;
+	}
+	.admin-trouble-body{
+		margin-bottom: calc((60 / 1080) * 100vw);
+	}
+	.admin-trouble-body li{
+		margin-bottom: calc((20 / 1080) * 100vw);
+		width: 100%;
+		height: calc((120 / 1080) * 100vw);
+		line-height: calc((120 / 1080) * 100vw);
+		background: #e7e7e7;
+		font-size: calc((45 / 1080) * 100vw);
+		font-weight: bold;
+		-webkit-border-radius: calc((15 / 1080) * 100vw);
+		-moz-border-radius: calc((15 / 1080) * 100vw);
+		border-radius: calc((15 / 1080) * 100vw);
+	}
+	.admin-trouble-body li span{
+		color: #bf2020;
+	}
+
+
+	.admin-solution{
+		margin-top: calc((30 / 1080) * -100vw);
+	}
+	.admin-solution-arrow{
+		margin-bottom: calc((10 / 1080) * 100vw);
+		color: #258b3e;
+		font-size: calc((60 / 1080) * 100vw);
+		transform: scale(1.5, 1);
+	}
+	.admin-solution-title{
+		margin-bottom: calc((120 / 1080) * 100vw);
+		color: #258b3e;
+		font-size: calc((76 / 1080) * 100vw);
+		font-weight: bold;
+		line-height: 1.2;
+	}
+	.admin-solution-title span{
+		display: block;
+		margin: 0 auto;
+		margin-bottom: calc((30 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((43 / 1080) * 100vw);
+		font-weight: bold;
+		text-align: center;
+		width: calc((400 / 1080) * 100vw);
+		height: calc((68 / 1080) * 100vw);
+		line-height: calc((68 / 1080) * 100vw);
+		font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Yu Gothic", "YuGothic", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		background: #c23838;
+		border-radius: calc((5 / 1080) * 100vw);
+	}
+	.admin-feature{
+		margin-bottom: calc((90 / 1080) * 100vw);
+		padding-top: calc((80 / 1080) * 100vw);
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+		padding-bottom: calc((90 / 1080) * 100vw);
+		background: #258b3e;
+		position:relative;
+		&::before{
+			content:"";
+			width:100vw;
+			height:100%;
+			z-index:-1;
+			display:block;
+			background: #258b3e;
+			position:absolute;
+			top:0;
+			left:0;
+			margin-left:-100vw;
+		}
+		&::after{
+			content:"";
+			width:100vw;
+			height:100%;
+			z-index:-1;
+			display:block;
+			background: #258b3e;
+			position:absolute;
+			top:0;
+			right:0;
+			margin-right:-100vw;
+		}
+
+	}
+	.admin-feature-title{
+		display: inline-block;
+		margin-bottom: calc((30 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((60 / 1080) * 100vw);
+		padding-bottom: calc((20 / 1080) * 100vw);
+		border-bottom: #fff 4px dotted;
+	}
+	.admin-feature-text{
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+		margin-bottom: calc((90 / 1080) * 100vw);
+	}
+	.admin-feature-banner{
+		padding-left: calc((36 / 1080) * 100vw);
+		padding-right: calc((36 / 1080) * 100vw);
+	}
+	.admin-feature-banner li{
+		float: left;
+		margin-bottom: calc((60 / 1080) * 100vw);
+		width: calc((340 / 810) * 100%);
+	}
+	.admin-feature-banner li:nth-child(even){
+		float: right;
+	}
+	.admin-feature-banner-img{
+		margin-bottom: calc((30 / 1080) * 100vw);
+	}
+	.admin-feature-banner-text{
+		color: #fff;
+		font-size: calc((33 / 1080) * 100vw);
+		letter-spacing: -0.12em;
+		line-height: 1.4;
+	}
+	.admin-feature-catch{
+		margin-bottom: calc((90 / 1080) * 100vw);
+		font-size: calc((54 / 1080) * 100vw);
+		color: #fff;
+		text-decoration: underline solid #fff774;
+	}
+	.admin-feature-lead{
+		text-align: left;
+		margin-bottom: calc((20 / 1080) * 100vw);
+		font-size: calc((40 / 1080) * 100vw);
+		color: #fff;
+	}
+
+	.admin-feature-contact{
+	}
+	.admin-feature-contact div a{
+		display: block;
+		margin-bottom: calc((20 / 1080) * 100vw);
+		padding-left: calc((50 / 1080) * 100vw);
+		width: 100%;
+		height: calc((150 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((60 / 1080) * 100vw);
+		text-align: left;
+		line-height: calc((150 / 1080) * 100vw);
+	}
+	.admin-feature-mail a{
+		background: #eeba00;
+	}
+	.admin-feature-mail a::before {
+	    padding-right: 2em;
+	    content: '\f0e0';
+	    font-weight: bold;
+	    font-family: 'Font Awesome 5 Free';
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	.admin-feature-line a{
+		padding-left: calc((40 / 1080) * 100vw) !important;
+		background: #5bc875;
+	}
+	.admin-feature-line a i{
+	    padding-right: 2em;
+	}
+	.admin-feature-tel a{
+		background: #fff;
+		color: #319d4e !important;
+	}
+	.admin-feature-tel a:before {
+		padding-right: 3em;
+		content: '\f095';
+		font-size: 20px;
+		font-weight: bold;
+		font-family: 'Font Awesome 5 Free';
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.admin-menu{
+		margin-bottom: 5vw;
+	}
+	.admin-menu-title{
+		margin: 0 auto 5.3vw;
+		width: 42.9vw;
+		height: 8vw;
+		line-height: 7.9vw;
+		color: #fff;
+		text-align: center;
+		font-size: 4.7vw;
+		background: #258b3e;
+		-webkit-border-radius: 4vw;
+		-moz-border-radius: 4vw;
+		border-radius: 4vw;
+	}
+	.admin-menu-inner{
+		padding: 0 7.9vw;
+	}
+	.admin-menu-once{
+		margin-bottom: 5.3vw;
+	}
+	.admin-menu-once-title{
+		margin-bottom: 2.6vw;
+		color: #fff;
+		padding: 0.5em 0 0.5em 3.9vw;
+		font-size: 4.1vw;
+		background: #257dcf;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+		text-align: left;
+	}
+	.admin-menu-once-title span{
+		display: block;
+		font-size: 3.4vw;
+	}
+	.admin-menu-items{
+		width: 100%;
+	}
+	.admin-menu-items li{
+		margin-bottom: 2.6vw;
+		padding: 2.6vw;
+		text-align: left;
+		background: #FFF;
+	}
+	.admin-menu-items li h4{
+		margin-bottom: 2.6vw;
+		height: 6vw;
+		line-height: 6vw;
+		color: #fff;
+		text-align: center;
+		font-size: 3.7vw;
+		display: inline-block;
+		padding: 0 1.0em;
+		min-width: 31.5vw;
+		background: #257dcf;
+		-webkit-border-radius: 3vw;
+		-moz-border-radius: 3vw;
+		border-radius: 3vw;
+	}
+	.admin-menu-items-text{
+		font-size: 3.7vw;
+	}
+	.admin-menu-once:nth-child(2) .admin-menu-once-title{
+		background: #db4c53;
+	}
+	.admin-menu-once:nth-child(2) .admin-menu-items li h4{
+		background: #db4c53;
+	}
+	.admin-menu-once:nth-child(3) .admin-menu-once-title{
+		background: #694c83;
+	}
+	.admin-menu-once:nth-child(3) .admin-menu-items li h4{
+		background: #694c83;
+	}
+
+	.admin-conditions{
+		margin-bottom: calc((90 / 1080) * 100vw);
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+	}
+	.admin-conditions-title{
+		padding-top: 0.9em;
+		width: 100%;
+		height: calc((180 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+		line-height: 1.1;
+		background: url(https://www.g1system.co.jp/images/adminsp/admin-conditions-title-bg.png) no-repeat center 0;
+		-webkit-background-size: 100% auto;
+		background-size: 100% auto;
+	}
+	.admin-conditions-title span{
+		color: #fff774;
+	}
+	.admin-conditions-inner{
+		padding-left: calc((60 / 1080) * 100vw);
+		padding-right: calc((60 / 1080) * 100vw);
+		padding-bottom: calc((60 / 1080) * 100vw);
+		border: #215796 4px solid;
+		border-top: none;
+	    -webkit-border-top-left-radius: 0;
+	    -webkit-border-top-right-radius: 0;
+	    -webkit-border-bottom-right-radius: calc((26 / 1080) * 100vw);
+	    -webkit-border-bottom-left-radius: calc((26 / 1080) * 100vw);
+	    -moz-border-radius-topleft: 0;
+	    -moz-border-radius-topright: 0;
+	    -moz-border-radius-bottomright: calc((26 / 1080) * 100vw);
+	    -moz-border-radius-bottomleft: calc((26 / 1080) * 100vw);
+	}
+	.admin-conditions-list li{
+		padding-left: calc((130 / 1080) * 100vw);
+		padding-top: calc((30 / 1080) * 100vw);
+		padding-bottom: calc((30 / 1080) * 100vw);
+		font-size: calc((42 / 1080) * 100vw);
+		font-weight: bold;
+		text-align: left;
+		border-bottom: #215796 3px solid;
+		background: url(https://www.g1system.co.jp/images/admin/admin-conditions-list-icon.png) no-repeat 1.4vw 2vw;
+		-webkit-background-size: 7.4vw 7.4vw;
+		background-size: 7.4vw 7.4vw;
+	}
+
+	.admin-reassurance{
+		margin-bottom: calc((90 / 1080) * 100vw);
+		padding-top: calc((67 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-bottom: calc((90 / 1080) * 100vw);
+		background: #258b3e;
+	}
+	.admin-reassurance-title{
+		margin-bottom: calc((55 / 1080) * 100vw);
+		display: inline-block;
+		border-bottom: #fff 4px dotted;
+		color: #fff;
+		font-size: calc((60 / 1080) * 100vw);
+	}
+	.admin-reassurance-title span{
+		color: #fff774;
+	}
+	.admin-reassurance-title span span{
+		margin-right: 5px;
+		font-size: calc((80 / 1080) * 100vw);
+		font-style: italic;
+	}
+	.admin-reassurance-text{
+		margin-bottom: calc((75 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+	}
+	.admin-reassurance-inner{
+	}
+	.admin-reassurance-list li{
+		margin-bottom: calc((90 / 1080) * 100vw);
+	}
+	.admin-reassurance-list li:nth-child(4){
+		margin-bottom: 0;
+	}
+	.admin-reassurance-list-upper{
+		margin-bottom: calc((55 / 1080) * 100vw);
+	}
+	.admin-reassurance-list-number{
+		float: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: calc((180 / 1080) * 100vw);
+		height: calc((180 / 1080) * 100vw);
+		background: #fff;
+		color: #258b3e;
+		font-size: calc((39 / 1080) * 100vw);
+		font-weight: bold;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		line-height: 1.2;
+	}
+	.admin-reassurance-list-number span{
+		display: inline-block;
+		font-size: calc((58.5 / 1080) * 100vw);
+		font-style: italic;
+		padding-right: .2em;
+	}
+	.admin-reassurance-list-body{
+		float: right;
+		width: calc((670 / 1080) * 100vw);
+		text-align: left;
+		margin-bottom:1.5em;
+	}
+	.admin-reassurance-list-title{
+		font-size: calc((51 / 1080) * 100vw);
+		color: #fff774;
+		margin-bottom: 0.5em;
+	}
+	.admin-reassurance-list-text{
+		color: #fff;
+		font-size: calc((36 / 1080) * 100vw);
+	}
+	.admin-reassurance-list-text br{
+		display: none;
+	}
+
+	.admin-cost{
+		display: none;
+		padding-top: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-bottom: calc((30 / 1080) * 100vw);
+	}
+	.admin-cost-title{
+		margin-bottom: calc((60 / 1080) * 100vw);
+		color: #1a7731;
+		font-size: calc((60 / 1080) * 100vw);
+		font-weight: bold;
+		line-height: 1.2;
+	}
+	.admin-cost-text{
+		margin-bottom: calc((60 / 1080) * 100vw);
+		color: #1a7731;
+		font-size: calc((45 / 1080) * 100vw);
+	}
+	.admin-cost-once{
+		margin-bottom: calc((60 / 1080) * 100vw);
+	}
+
+	.admin-cost-once-title{
+		margin-bottom: calc((30 / 1080) * 100vw);
+		height: calc((90 / 1080) * 100vw);
+		line-height: calc((90 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+		font-weight: bold;
+		-webkit-border-radius: calc((45 / 1080) * 100vw);
+		-moz-border-radius: calc((45 / 1080) * 100vw);
+		border-radius: calc((45 / 1080) * 100vw);
+		background: #1a7731;
+		
+	}
+	.admin-cost-once-list{
+	}
+	.admin-cost-once-list-item{
+		float: left;
+		width: 50%;  
+	}
+	.admin-cost-once-list-header{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		height: calc((196 / 1080) * 100vw);
+		border: #fff 1px solid;
+		color: #fff;
+		font-size: calc((36 / 1080) * 100vw);
+		font-weight: bold;
+		background: #83c192;
+	}
+	.admin-cost-once-list-text{
+		padding: calc((25 / 1080) * 100vw);
+		border: #d7d7d7 1px solid;
+		font-size: calc((27 / 1080) * 100vw);
+		color: #c11313;
+	}
+	.admin-cost-once-list-text span{
+		color: #222;
+	}
+
+	.admin-cost-once:first-child .admin-cost-once-list-item{
+		width: -webkit-calc(100% / 3);
+		width: -moz-calc(100% / 3);
+		width: calc(100% / 3);  
+	}
+	.admin-cost-once:first-child .admin-cost-once-list-text{
+		min-height: calc((200 / 1080) * 100vw);
+	}
+
+	.admin-cost-once:last-child .admin-cost-once-list-item,
+	.admin-cost-once:nth-last-child(2) .admin-cost-once-list-item{
+		width: 100%;
+	}
+
+	.admin-procedure{
+		padding-top: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-bottom: calc((70 / 1080) * 100vw);
+		background: #258b3e;
+		position:relative;
+		&::before{
+			content:"";
+			width:100vw;
+			height:100%;
+			z-index:-1;
+			display:block;
+			background: #258b3e;
+			position:absolute;
+			top:0;
+			left:0;
+			margin-left:-100vw;
+		}
+		&::after{
+			content:"";
+			width:100vw;
+			height:100%;
+			z-index:-1;
+			display:block;
+			background: #258b3e;
+			position:absolute;
+			top:0;
+			right:0;
+			margin-right:-100vw;
+		}
+	}
+	.admin-procedure-title {
+	    margin-bottom: calc((85 / 1080) * 100vw);
+	    display: inline-block;
+	    border-bottom: #fff 4px dotted;
+	    color: #fff;
+	    font-size: calc((60 / 1080) * 100vw);
+	}
+	.admin-procedure-inner{
+	}
+	.admin-procedure-list{
+	}
+	.admin-procedure-list-item{
+		position: relative;
+	    margin-bottom: calc((110 / 1080) * 100vw);
+		padding-left: calc((30 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+		border: #fff 1px solid;
+	}
+	.admin-procedure-list-item:before{
+		display: block;
+		content: '';
+		position: absolute;
+		bottom: calc((81 / 1080) * -100vw);
+		left: 0;
+		width: 100%;
+		height: calc((51 / 1080) * 100vw);
+		background: url(https://www.g1system.co.jp/images/adminsp/admin-procedure-list-item-arrow.png) no-repeat center 0;
+		-webkit-background-size: 5.555vw 4.7vw;
+		background-size: 5.555vw 4.7vw;
+	}
+	.admin-procedure-list-item:last-child:before{
+		display: none;
+	}
+	.admin-procedure-list-img{
+		float: left;
+		width: calc((205 / 1080) * 100vw);
+		height: calc((205 / 1080) * 100vw);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.admin-procedure-list-text{
+		float: right;
+		width: calc((570 / 1080) * 100vw);
+		height: calc((205 / 1080) * 100vw);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+	}
+	.admin-procedure-list-item:nth-last-child(2) .admin-procedure-list-text{
+		padding-left: calc((35 / 1080) * 100vw);
+		padding-right: calc((35 / 1080) * 100vw);
+	}
+	.admin-procedure-list-item:last-child .admin-procedure-list-text{
+		padding-left: calc((85 / 1080) * 100vw);
+		padding-right: calc((85 / 1080) * 100vw);
+	}
+	.admin-procedure-list-text br:last-child{
+		display: none;
+	}
+	.admin-procedure-list-item:last-child .admin-procedure-list-text br,
+	.admin-procedure-list-item:last-child .admin-procedure-list-text nbsp,
+	.admin-procedure-list-item:nth-last-child(2) .admin-procedure-list-text br,
+	.admin-procedure-list-item:nth-last-child(2) .admin-procedure-list-text nbsp{
+		display: none;
+	}
+	.admin-procedure-contact{
+	}
+	.admin-procedure-contact div a{
+		display: block;
+		margin-bottom: calc((20 / 1080) * 100vw);
+		padding-left: calc((50 / 1080) * 100vw);
+		width: 100%;
+		height: calc((150 / 1080) * 100vw);
+		color: #fff;
+		font-size: calc((60 / 1080) * 100vw);
+		text-align: left;
+		line-height: calc((150 / 1080) * 100vw);
+	}
+	.admin-procedure-mail a{
+		background: #eeba00;
+	}
+	.admin-procedure-mail a::before {
+	    padding-right: 2em;
+	    content: '\f0e0';
+	    font-weight: bold;
+	    font-family: 'Font Awesome 5 Free';
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	.admin-procedure-line a{
+		padding-left: calc((40 / 1080) * 100vw) !important;
+		background: #5bc875;
+	}
+	.admin-procedure-line a i{
+	    padding-right: 3em;
+	}
+	.admin-procedure-tel a{
+		background: #fff;
+		color: #319d4e !important;
+	}
+	.admin-procedure-tel a:before {
+		padding-right: 2em;
+		content: '\f095';
+		font-size: 20px;
+		font-weight: bold;
+		font-family: 'Font Awesome 5 Free';
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+
+	.admin-voice{
+		padding-top: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-bottom: calc((70 / 1080) * 100vw);
+	}
+	.admin-voice-title {
+	    margin-bottom: calc((70 / 1080) * 100vw);
+		margin-right: calc((80 / 1080) * 100vw);
+		margin-left: calc((80 / 1080) * 100vw);
+	    color: #258b3e;
+	    font-size: calc((60 / 1080) * 100vw);
+	    font-weight: bold;
+	    line-height: 1.4;
+	    background: url(https://www.g1system.co.jp/images/adminsp/admin-common-title-bg.png) no-repeat center bottom;
+	    -webkit-background-size: 100% auto;
+	    background-size: 100% auto;
+	}
+	.admin-voice-list{
+	}
+	.admin-voice-list-item{
+		display: none;
+	}
+	.admin-voice-list-item:nth-child(1),
+	.admin-voice-list-item:nth-child(2),
+	.admin-voice-list-item:nth-child(3){
+		display: block;
+	    margin-bottom: calc((30 / 1080) * 100vw);
+	}
+	.admin-voice-list-img{
+		float: left;
+		width: 50%;
+	}
+	.admin-voice-list-img img{
+	    -webkit-border-top-left-radius: 16px;
+	    -webkit-border-top-right-radius: 0;
+	    -webkit-border-bottom-right-radius: 0;
+	    -webkit-border-bottom-left-radius: 16px;
+	    -moz-border-radius-topleft: 16px;
+	    -moz-border-radius-topright: 0;
+	    -moz-border-radius-bottomright: 0;
+	    -moz-border-radius-bottomleft: 16px;
+	}
+	.admin-voice-list-body{
+		float: right;
+		position: relative;
+		width: 50%;
+		padding: calc((30 / 1080) * 100vw);
+		padding-right: calc((40 / 1080) * 100vw);
+		text-align: left;
+		border: #e2e2e2 1px solid;
+		border-left: none;
+	    -webkit-border-top-left-radius: 0;
+	    -webkit-border-top-right-radius: calc((16 / 1080) * 100vw);
+	    -webkit-border-bottom-right-radius: calc((16 / 1080) * 100vw);
+	    -webkit-border-bottom-left-radius: 0;
+	    -moz-border-radius-topleft: 0;
+	    -moz-border-radius-topright: calc((16 / 1080) * 100vw);
+	    -moz-border-radius-bottomright: calc((16 / 1080) * 100vw);
+	    -moz-border-radius-bottomleft: 0;
+	}
+	.admin-voice-list-title{
+		margin-bottom: .5em;
+		font-size: calc((36 / 1080) * 100vw);
+		font-weight: bold;
+	}
+	.admin-voice-list-text{
+		font-size: calc((36 / 1080) * 100vw);
+	}
+
+
+
+	/* 物件情報 一覧 */
+
+	/* タブ */
+	.top-tab{
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+	}
+	ul#tabchange {
+		margin-bottom: calc((90 / 1080) * 100vw);
+		border: #dde0d6 2px solid;
+		-webkit-border-radius: 2vw;
+		-moz-border-radius: 2vw;
+		border-radius: 2vw;
+		
+	}
+	ul#tabchange li {
+		line-height: calc((150 / 1080) * 100vw);
+		text-align: center;
+		font-size: calc((45 / 1080) * 100vw);
+	}
+	ul#tabchange li a{
+		display: block;
+		color: #222;
+		background: #fff;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+		opacity: 1;
+		text-decoration: none !important;
+		border-top: #dde0d6 2px solid;
+		border-bottom: #dde0d6 2px solid;
+	}
+	ul#tabchange li:nth-child(1) a,
+	ul#tabchange li:nth-child(3) a{
+		border: none;
+	}
+
+	ul#tabchange li a.activeBox { /*表示コンテンツのタブのスタイル*/
+		color: #fff;
+		background: #eeba00;
+	}
+	ul#tabchange li a:hover {
+		color: #fff;
+		background: #eeba00;
+		border: none;
+		text-decoration: none;
+	}
+	div#tabchangeContents {
+		position: relative;
+	}
+	div#tabchangeContents div.tabchangeBox{
+	}
+	div#tabchangeContents div.tabchangeBox h2{
+		margin-bottom: calc((60 / 1080) * 100vw);
+		padding-bottom: calc((30 / 1080) * 100vw);
+		font-size: calc((54 / 1080) * 100vw);
+		font-weight: bold;
+		border-bottom: #319d4e 3px solid;
+	}
+	.properties-once{
+		margin-bottom: calc((60 / 1080) * 100vw);
+	}
+	.properties-once-title{
+		position: relative;
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+		font-weight: bold;
+		padding: 3.4vw 5.6vw;
+		background: #319d4e;
+	}
+	.properties-once-title a{
+		color: #fff;
+	}
+	.properties-once-inner{
+		padding: calc((60 / 1080) * 100vw);
+		border-top: none;
+	}
+	.properties-once-img{
+		margin-bottom: calc((30 / 1080) * 100vw);
+	}
+	.properties-once-body{
+		text-align: left;
+	}
+	.properties-once-body table{
+		width: 100% !important;
+	}
+	.properties-once-body tr:nth-child(odd){
+		background: #FFF;
+	}
+	.properties-once-body th{
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 0.5em;
+		font-size: calc((42 / 1080) * 100vw);
+		font-weight: bold;
+		width: 40%;
+	}
+	.properties-once-body td{
+		padding-top: 0.5em;
+		padding-bottom: 0.5em;
+		padding-left: 0.5em;
+		font-size: calc((42 / 1080) * 100vw);
+	}
+	.properties-once-body td span{
+		color: #dd6627;
+		font-weight: bold;
+	}
+
+
+	/* 物件情報 カテゴリー */
+	.template-type-properties02 .properties-once-title{
+		padding: calc((40 / 1080) * 100vw);
+		font-size: calc((35 / 1080) * 100vw);
+	}
+	.template-type-properties02 .properties-once-body th,
+	.template-type-properties02 .properties-once-body td{
+		font-size: calc((35 / 1080) * 100vw);
+	}
+
+	/* 物件情報 詳細 */
+	.single-properties02 article{
+		padding-left: calc((90 / 1080) * 100vw);
+		padding-right: calc((90 / 1080) * 100vw);
+	}
+	.properties-title{
+		color: #fff;
+		font-size: calc((45 / 1080) * 100vw);
+		font-weight: bold;
+		padding: 3.4vw 5.6vw;
+		background: #319d4e;
+		border: none;
+		margin-bottom: calc((60 / 1080) * 100vw);
+	}
+	.properties-title:after{
+		display: none;
+	}
+	.gallery-detail{
+		margin-bottom: calc((60 / 1080) * 100vw);
+		padding: 0;
+	}
+	.gallery-detail-main{
+		margin-bottom: calc((30 / 1080) * 100vw);
+	}
+	.gallery-detail-sub{
+	}
+	.gallery-detail-sub ul{
+	}
+	.gallery-detail-sub ul li{
+		float: left;
+		margin-right: calc((33 / 900) * 100%);
+		margin-bottom: calc((30 / 900) * 100vw);
+		width: calc((200 / 900) * 100%);
+	}
+	.gallery-detail-sub ul li:nth-child(4n){
+		margin-right: 0;
+	}
+	.gallery-detail-sub ul li span{
+		display: none;
+	}
+	.gallery-detail-sub ul li:first-child{
+		height: calc((247 / 1080) * 100vw);
+		border: #319d4e 3px solid;
+	}
+	.gallery-detail-sub ul li:first-child span{
+		display: block;
+		background: #319d4e;
+		color: #fff;
+		font-size: calc((36 / 1080) * 100vw);
+		font-weight: bold;
+	}
+	.gallery-content{
+		margin-bottom: calc((30 / 1080) * 100vw);
+	}
+	.gallery-content table{
+		width: 100%;
+	}
+	.gallery-content table th{
+		width: 100%;
+		font-size: calc((42 / 1080) * 100vw);
+		text-align: left;
+		padding: .5em;
+		background: #eeba00;
+	}
+	.gallery-content table td{
+		width: 100%;
+		font-size: calc((42 / 1080) * 100vw);
+		text-align: left;
+		padding: .5em;
+	}
+	.gallery-content table td span{
+		color: #dd6627;
+		font-weight: bold;
+	}
+	.gallery-time{
+		margin-bottom: calc((90 / 1080) * 100vw);
+		font-size: calc((36 / 1080) * 100vw);
+	}
+	.gallery-map-title{
+		margin-bottom: calc((60 / 1080) * 100vw);
+	    padding-bottom: calc((30 / 1080) * 100vw);
+	    font-size: calc((54 / 1080) * 100vw);
+	    font-weight: bold;
+	    border-bottom: #319d4e 3px solid;
+	}
+	.gallery-map{
+		margin-bottom: calc((120 / 1080) * 100vw);
+	}
+	.gallery-map-inner,
+	.gallery-map-inner iframe{
+		height: calc((900 / 1080) * 100vw);
+		width: 100%;
+	}
+	.gallery-contact-title{
+		margin-bottom: calc((60 / 1080) * 100vw);
+	    padding-bottom: calc((30 / 1080) * 100vw);
+	    font-size: calc((54 / 1080) * 100vw);
+	    font-weight: bold;
+	    border-bottom: #319d4e 3px solid;
+	}
+	.gallery-contact-inner{
+	}
+	.gallery-contact-tel{
+		margin-bottom: calc((30 / 1080) * 100vw);
+	}
+	.gallery-contact-tel a {
+	    display: block;
+	    width: 100%;
+	    height: calc((150 / 1080) * 100vw);
+	    line-height: calc((150 / 1080) * 100vw);
+	    text-align: center;
+	    background: #e2e2e2;
+	    font-size: calc((60 / 1080) * 100vw);
+	    font-weight: bold;
+	    letter-spacing: 0.05em;
+		-webkit-border-radius: calc((75 / 1080) * 100vw);
+		-moz-border-radius: calc((75 / 1080) * 100vw);
+		border-radius: calc((75 / 1080) * 100vw);
+		color: #258b3e;
+	}
+	.gallery-contact-tel a::before {
+	    padding-right: 5px;
+	    content: '\f095';
+	    font-size: calc((60 / 1080) * 100vw);
+	    font-weight: bold;
+	    font-family: 'Font Awesome 5 Free';
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+
+	.gallery-contact-mail{
+	}
+	.gallery-contact-mail input.mail{
+	    display: block;
+	    width: 100%;
+	    height: calc((150 / 1080) * 100vw);
+	    line-height: calc((150 / 1080) * 100vw);
+	    text-align: center;
+	    background: #eeba00;
+		color: #fff;
+	    font-size: calc((54 / 1080) * 100vw);
+	    font-weight: bold;
+	    letter-spacing: 0.05em;
+		-webkit-border-radius: calc((75 / 1080) * 100vw);
+		-moz-border-radius: calc((75 / 1080) * 100vw);
+		border-radius: calc((75 / 1080) * 100vw);
+		border: none;
+		cursor: pointer;
+	}
+
+
+	/* Arrows */
+	.lg-actions .lg-next, .lg-actions .lg-prev{
+		color: #fff !important;
+	}
+	.lg-actions .lg-prev:before,
+	.lg-actions .lg-next:before{
+		font-family: 'Font Awesome 5 Free';
+		line-height: 1;
+		color: #fff;
+		font-size: 20px;
+		font-weight: bold;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	.lg-actions .lg-prev:before{
+		content: '\f104';
+	}
+	.lg-actions .lg-next:before{
+		content: '\f105';
+	}
+	.lg-actions .lg-prev:after,
+	.lg-actions .lg-next:after{
+		display: none;
+	}
+
+
+	.term-qa h3{
+		padding-left: 6vw;
+		background: url(https://www.g1system.co.jp/images/common/q.png) no-repeat 1vw 50%;
+		-webkit-background-size: 4vw auto;
+		background-size: 4vw auto;
+	}
+	.term-qa p:first-letter{
+		padding-left: 5vw;
+		background: url(https://www.g1system.co.jp/images/common/a.png) no-repeat 0 50%;
+		-webkit-background-size: 4vw auto;
+		background-size: 4vw auto;
+	}
+	.term-qa p{
+		line-height: 1.8;
+		margin-bottom: 2.0em;
+	}
+
+	.gallery-youtube{
+		margin-bottom: 5vw;
+	}
+
+	.tabchangeBox h2{
+		padding: 0 1em;
+	}
+	.properties-once-btn form input.mail {
+	    display: block;
+		margin: 0 auto 3vw;
+	    width: 50vw;
+	    height: 10vw;
+	    line-height: 10vw;
+	    -webkit-border-radius: 5vw;
+	    -moz-border-radius: 5vw;
+	    border-radius: 5vw;
+	    background: #eeba00;
+	    color: #fff;
+	    font-size: 3.5vw;
+	    text-align: center;
+	    border: none;
+	    cursor: pointer;
+	}
+	.properties-once-btn a.detail-link {
+	    display: block;
+		margin: 0 auto;
+	    width: 50vw;
+	    height: 10vw;
+	    line-height: 10vw;
+	    -webkit-border-radius: 5vw;
+	    -moz-border-radius: 5vw;
+	    border-radius: 5vw;
+	    background: #eeba00;
+	    color: #fff;
+	    font-size: 3.5vw;
+	    text-align: center;
+	    border: none;
+	    cursor: pointer;
+	}
+
+
+
+	/* 会社について */
+	.lower-top-once{
+		position: relative;
+		margin: 0 3.5vw 5vw;
+		width: 93vw;
+	}
+	.lower-top-once-title a{
+		display: block;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		background: #258b3e;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+	.lower-top-once-title a:hover{
+		opacity: 0.75;
+		text-decoration: none;
+	}
+	.lower-top-once-inner{
+		padding: 10px 10px 50px;
+		border: #258b3e 1px solid;
+	}
+	.lower-top-once-img{
+		margin-bottom: 10px;
+	}
+	.lower-top-once-img img{
+		width: 100% !important;
+	}
+	.lower-top-once-btn a{
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		color: #000;
+		font-size: 12px;
+		background: #eeba00;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+	.lower-top-once-btn a:hover{
+		opacity: 0.75;
+		text-decoration: none;
+	}
+
+	#topmovie{
+		position: relative;
+		width: 100%;
+	}
+	#topmovie:before{
+		display: block;
+		content: '';
+		padding-top: 60%;
+	}
+	#topmovie-inner{
+		position: absolute;
+		top: 0;
+		right: -10%;
+		bottom: 0;
+		left: -10%;
+	}
+	#topmovie-inner video{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+	}
+	.topmovie-over{
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 20;
+		background: url(https://www.g1system.co.jp/images/pc/topmovie-over.png) repeat 0 0;
+	}
+	 
+	#mainimage-catch{
+		 position: absolute;
+		 top: calc((100 / 1080) * 100vw);
+		 left: calc((130 / 1080) * 100vw);
+		 text-align: left;
+		 color: #fff;
+		 font-size: calc((70 / 1080) * 100vw);
+		 text-shadow: 3px 3px 3px rgba(100,100,100,.3), 3px -3px 3px rgba(100,100,100,.3), -3px 3px 3px rgba(100,100,100,.3), -3px -3px 3px rgba(100,100,100,.3);
+	}
+	#mainimage-text{
+		 position: absolute;
+		 top: calc((250 / 1080) * 100vw);
+		 left: calc((130 / 1080) * 100vw);
+		 text-align: left;
+		 color: #fff;
+		 font-size: calc((30 / 1080) * 100vw);
+		 text-shadow: 3px 3px 3px rgba(100,100,100,.3), 3px -3px 3px rgba(100,100,100,.3), -3px 3px 3px rgba(100,100,100,.3), -3px -3px 3px rgba(100,100,100,.3);
+	}
+
+
+	a.read-more {
+	    color: #f60;
+	}
+
+
+
+	.gallery-theta{
+		margin-bottom: 5vw;
+		text-align: center;
+	}
+
+
+
+
+	.properties-icon{
+		margin: 3vw 0;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.properties-icon div{
+		margin-right: 2vw;
+		background: #319d4e;
+		color: #fff;
+		font-size: 3.9vw;
+		font-weight: bold;
+		height: 10vw;
+		padding: 0 2.0em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.properties-icon div:last-child{
+		background: #eeba00;
+	}
+
+
+	.single-properties .gallery-detail-sub ul li{
+		border: none !important;
+	}
+
+
+	.admin-movie{
+		margin-bottom: 10vw;
+		padding: 0 calc((90 / 1080) * 100vw);
+		display: grid;
+		grid-template-columns: repeat(1, 1fr);
+		gap: 3vw;
+	}
+
+
+	.addlist{
+		display: none;
+	}
+}
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+ここからパソコン用CSS　横幅768px以上で適用するCSS-----------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------- */
+
+
+@media print, screen and (min-width: 768px) {
+	.admin-badge{
+		width:8em;
+		display:block;
+		position:absolute;
+		top:7em;
+		right:-4em;
+	}
+
+
+	/* 管理業務下層トップ */
+	.term-153 #content-inner{
+		padding-bottom: 0;
+	}
+	#admin-main{
+		margin-right: calc((50vw - 540px) * -1);
+		margin-left: calc((50vw - 540px) * -1);
+		text-align: center;
+	}
+	.admin-mainimage{
+	}
+	.admin-rate{
+		margin: 0 auto;
+		padding-left: 200px;
+		width: 1080px;
+		height: 100px;
+		background: #ffb321;
+		color: #fff;
+		font-size: 42px;
+		font-weight: 900;
+		margin-bottom: 60px;
+		line-height: 1.3;
+	}
+	.admin-rate .once{
+		margin-right: 10px;
+	}
+	.admin-rate .rate01{
+		margin: 0 10px;
+		color: #db4c53;
+		font-size: 80px;
+	}
+	.admin-rate .rate02{
+		margin: 0 80px 0 10px;
+		color: #db4c53;
+		font-size: 80px;
+	}
+	.admin-rate .percent{
+		font-size: 54px;
+	}
+	.admin-rate .date{
+		font-size: 12px;
+		font-weight: normal;
+	}
+
+	.admin-trouble{
+		margin: 0 auto;
+		width: 1080px;
+	}
+	.admin-trouble-title{
+		margin-bottom: 47px;
+		color: #258b3e;
+		font-size: 42px;
+		line-height: 1.4;
+		background: url(https://www.g1system.co.jp/images/admin/admin-common-title-bg.png) no-repeat center bottom;
+	}
+	.admin-trouble-subtitle{
+		margin-bottom: 7px;
+		padding-top: 14px;
+		height: 96px;
+		color: #fff;
+		font-size: 26px;
+		font-weight: bold;
+		background: url(https://www.g1system.co.jp/images/admin/admin-trouble-subtitle-bg.png) no-repeat center 0;
+	}
+	.admin-trouble-subtitle br{
+		display: none;
+	}
+	.admin-trouble-body{
+		position: relative;
+		width: 1080px;
+		height: 180px;
+		margin-bottom: 36px;
+		background: url(https://www.g1system.co.jp/images/admin/admin-trouble-body-bg.png) no-repeat center center;
+	}
+	.admin-trouble-body li{
+		position: absolute;
+		padding: 0 20px;
+		min-width: 320px;
+		height: 55px;
+		line-height: 55px;
+		background: #e7e7e7;
+		font-size: 22px;
+		font-weight: bold;
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+	}
+	.admin-trouble-body li span{
+		color: #bf2020;
+	}
+	.admin-trouble-body li:nth-child(1){
+		top: 0;
+		left: 0;
+	}
+	.admin-trouble-body li:nth-child(2){
+		top: 0;
+		right: 0;
+	}
+	.admin-trouble-body li:nth-child(3){
+		right: 670px;
+		bottom: 26px;
+	}
+	.admin-trouble-body li:nth-child(4){
+		left: 670px;
+		bottom: 26px;
+	}
+	.admin-trouble-body li:after{
+		display: block;
+		content: '';
+		position: absolute;
+		bottom: -26px;
+		width: 34px;
+		height: 26px;
+	}
+	.admin-trouble-body li:nth-child(1):after,
+	.admin-trouble-body li:nth-child(3):after{
+		right: 36px;
+		background: url(https://www.g1system.co.jp/images/admin/admin-trouble-list-bg01.png) no-repeat 0 0;
+	}
+	.admin-trouble-body li:nth-child(2):after,
+	.admin-trouble-body li:nth-child(4):after{
+		left: 36px;
+		background: url(https://www.g1system.co.jp/images/admin/admin-trouble-list-bg02.png) no-repeat 0 0;
+	}
+
+
+	.admin-solution{
+		margin-top: -15px;
+	}
+	.admin-solution-arrow{
+		margin-bottom: 20px;
+		color: #258b3e;
+		font-size: 50px;
+		transform: scale(1.5, 1);
+	}
+	.admin-solution-title{
+		margin-bottom: 47px;
+		color: #258b3e;
+		font-size: 48px;
+		font-weight: bold;
+	}
+	.admin-solution-title span{
+		display: block;
+		margin: 0 auto 20px;
+		color: #fff;
+		font-size: 28px;
+		font-weight: bold;
+		text-align: center;
+		width: 300px;
+		height: 45px;
+		line-height: 45px;
+		font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "Yu Gothic", "YuGothic", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+		background: #c23838;
+		border-radius: 5px;
+		font-weight: normal;
+	}
+	.admin-feature{
+		margin-bottom: 60px;
+		padding: 80px 0;
+		background: #258b3e;
+
+	}
+	.admin-feature-title{
+		display: inline-block;
+		margin-bottom: 40px;
+		color: #fff;
+		font-size: 42px;
+		padding-bottom: 15px;
+		border-bottom: #fff 4px dotted;
+	}
+	.admin-feature-text{
+		color: #fff;
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+	.admin-feature-banner{
+		margin: 0 auto 60px;
+		width: 960px;
+	}
+	.admin-feature-banner li{
+		float: left;
+		margin-right: 53px;
+		width: 200px;
+	}
+	.admin-feature-banner li:last-child{
+		margin-right: 0;
+	}
+	.admin-feature-banner-img{
+		margin-bottom: 28px;
+	}
+	.admin-feature-banner-text{
+		color: #fff;
+		font-size: 16px;
+		-ms-word-break: break-all;
+		word-break: keep-all;
+	}
+	.admin-feature-catch{
+		margin-bottom: 50px;
+		font-size: 31px;
+		color: #fff;
+		text-decoration: underline solid #fff774;
+	}
+	.admin-feature-lead{
+		margin-bottom: 20px;
+		font-size: 25px;
+		color: #fff;
+	}
+
+	.admin-feature-contact{
+		margin: 0 auto;
+		width: 1050px;
+	}
+	.admin-feature-contact div a{
+		float: left;
+		display: block;
+		width: 350px;
+		height: 80px;
+		color: #fff;
+		font-size: 22px;
+		text-align: center;
+		line-height: 80px;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+	.admin-feature-mail a{
+		background: #eeba00;
+	}
+	.admin-feature-mail a::before {
+	    padding-right: 5px;
+	    content: '\f0e0';
+	    font-weight: bold;
+	    font-family: 'Font Awesome 5 Free';
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	.admin-feature-line a{
+		background: #5bc875;
+	}
+	.admin-feature-tel a{
+		background: #fff;
+		color: #319d4e !important;
+	}
+	.admin-feature-tel a:before {
+		padding-right: 5px;
+		content: '\f095';
+		font-size: 20px;
+		font-weight: bold;
+		font-family: 'Font Awesome 5 Free';
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+	.admin-menu{
+		margin-bottom: 80px;
+	}
+	.admin-menu-title{
+		margin: 0 auto 30px;
+		width: 380px;
+		height: 60px;
+		line-height: 60px;
+		color: #fff;
+		text-align: center;
+		font-size: 36px;
+		background: #258b3e;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 30px;
+	}
+	.admin-menu-inner{
+		margin: 0 auto;
+		width: 1000px;
+	}
+	.admin-menu-once{
+		margin-bottom: 20px;
+	}
+	.admin-menu-once-title{
+		margin-bottom: 20px;
+		height: 60px;
+		line-height: 60px;
+		color: #fff;
+		padding-left: 30px;
+		font-size: 28px;
+		text-align: left;
+		background: #257dcf;
+	}
+	.admin-menu-once-title span{
+		margin-left: 0.5em;
+		font-size: 20px;
+	}
+	.admin-menu-items{
+		width: 100%;
+		display:flex;
+		justify-content:space-between;
+		flex-wrap:wrap;
+		&.clearfix::after{
+			content:none;
+		}
+	}
+	.admin-menu-items li{
+		//float: left;
+		margin-bottom: 20px;
+		width: 480px;
+		padding: 20px 22px;
+		text-align: left;
+		background: #FFF;
+		min-height:15em;
+	}
+	.admin-menu-items li:nth-child(even){
+		//float: right;
+	}
+	.admin-menu-items li h4{
+		margin-bottom: 10px;
+		height: 40px;
+		line-height: 40px;
+		color: #fff;
+		text-align: center;
+		font-size: 22px;
+		display: inline-block;
+		padding: 0 1.0em;
+		min-width: 187px;
+		background: #257dcf;
+		-webkit-border-radius: 20px;
+		-moz-border-radius: 20px;
+		border-radius: 20px;
+	}
+	.admin-menu-items-text{
+		font-size: 18px;
+	}
+	.admin-menu-once:nth-child(2) .admin-menu-once-title{
+		background: #db4c53;
+	}
+	.admin-menu-once:nth-child(2) .admin-menu-items li h4{
+		background: #db4c53;
+	}
+	.admin-menu-once:nth-child(3) .admin-menu-once-title{
+		background: #694c83;
+	}
+	.admin-menu-once:nth-child(3) .admin-menu-items li h4{
+		background: #694c83;
+	}
+
+	.admin-conditions{
+		margin: 80px auto;
+		width: 1080px;
+	}
+	.admin-conditions-title{
+		padding-top: 0.7em;
+		width: 1080px;
+		height: 140px;
+		color: #fff;
+		font-size: 34px;
+		line-height: 1.1;
+		background: url(https://www.g1system.co.jp/images/admin/admin-conditions-title-bg.png) no-repeat center 0;
+	}
+	.admin-conditions-title span{
+		color: #fff774;
+		font-size: 40px;
+	}
+	.admin-conditions-inner{
+		padding: 8px 46px 50px;
+		border: #215796 4px solid;
+		border-top: none;
+	    -webkit-border-top-left-radius: 0;
+	    -webkit-border-top-right-radius: 0;
+	    -webkit-border-bottom-right-radius: 18px;
+	    -webkit-border-bottom-left-radius: 18px;
+	    -moz-border-radius-topleft: 0;
+	    -moz-border-radius-topright: 0;
+	    -moz-border-radius-bottomright: 18px;
+	    -moz-border-radius-bottomleft: 18px;
+	}
+	.admin-conditions-list li{
+		float: left;
+		padding-left: 70px;
+		width: 390px;
+		height: 80px;
+		font-size: 22px;
+		font-weight: bold;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+		text-align: left;
+		line-height: 1.2;
+		border-bottom: #215796 3px solid;
+		background: url(https://www.g1system.co.jp/images/admin/admin-conditions-list-icon.png) no-repeat 0 50%;
+	}
+	.admin-conditions-list li:nth-child(even){
+		float: right;
+		width: 550px;
+	}
+
+	.admin-reassurance{
+		padding: 80px 0 50px;
+		background: #258b3e;
+		position:relative;
+		&::before{
+			content:"";
+			width:100vw;
+			height:100%;
+			z-index:-1;
+			display:block;
+			background: #258b3e;
+			position:absolute;
+			top:0;
+			left:0;
+			margin-left:-100vw;
+		}
+		&::after{
+			content:"";
+			width:100vw;
+			height:100%;
+			z-index:-1;
+			display:block;
+			background: #258b3e;
+			position:absolute;
+			top:0;
+			right:0;
+			margin-right:-100vw;
+		}
+	}
+	.admin-reassurance-title{
+		margin-bottom: 40px;
+		display: inline-block;
+		border-bottom: #fff 4px dotted;
+		color: #fff;
+		font-size: 42px;
+	}
+	.admin-reassurance-title span{
+		color: #fff774;
+	}
+	.admin-reassurance-title span span{
+		margin-right: 5px;
+		font-size: 62px;
+		font-style: italic;
+	}
+	.admin-reassurance-text{
+		margin-bottom: 70px;
+		color: #fff;
+		font-size: 20px;
+	}
+	.admin-reassurance-inner{
+		margin: 0 auto;
+		width: 1080px;
+	}
+	.admin-reassurance-list li{
+		margin-bottom: 50px;
+	}
+	.admin-reassurance-list li:nth-child(3){
+		margin-bottom: 72px;
+	}
+	.admin-reassurance-list-number{
+		float: left;
+		margin-right: 27px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 120px;
+		height: 120px;
+		background: #fff;
+		color: #258b3e;
+		font-size: 26px;
+		font-weight: bold;
+		-webkit-border-radius: 50%;
+		-moz-border-radius: 50%;
+		border-radius: 50%;
+		line-height: 1.2;
+	}
+	.admin-reassurance-list-number span{
+		display: inline-block;
+		font-size: 39px;
+		font-style: italic;
+		padding-right: .2em;
+	}
+	.admin-reassurance-list-body{
+		float: left;
+		width: 385px;
+		text-align: left;
+	}
+	.admin-reassurance-list-title{
+		font-size: 30px;
+		color: #fff774;
+		margin-bottom: 0.5em;
+	}
+	.admin-reassurance-list-text{
+		color: #fff;
+		font-size: 18px;
+	}
+
+	.admin-cost{
+		display: none;
+		margin: 0 auto;
+		width: 1080px;
+		padding: 80px 0 50px;
+	}
+	.admin-cost-title{
+		margin-bottom: 40px;
+		display: inline-block;
+		color: #1a7731;
+		font-size: 42px;
+		font-weight: bold;
+		line-height: 1.2;
+	}
+	.admin-cost-text{
+		margin-bottom: 30px;
+		color: #1a7731;
+		font-size: 20px;
+	}
+	.admin-cost-once{
+		margin-bottom: 50px;
+		width: 530px;
+		float: left;
+	}
+	.admin-cost-once:nth-child(odd){
+		float: right;
+	}
+	.admin-cost-once:nth-child(1){
+		width: 1080px;
+		float: none;
+	}
+	.admin-cost-once-title{
+		margin-bottom: 23px;
+		height: 50px;
+		line-height: 50px;
+		color: #fff;
+		font-size: 22px;
+		font-weight: bold;
+		-webkit-border-radius: 25px;
+		-moz-border-radius: 25px;
+		border-radius: 25px;
+		background: #1a7731;
+		
+	}
+	.admin-cost-once-list{
+		width: 100%;
+	}
+	.admin-cost-once-list-item{
+		float: left;
+		width: 50%;
+	}
+	.admin-cost-once-list-header{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		width: 100%;
+		height: 116px;
+		border: #fff 1px solid;
+		color: #fff;
+		font-size: 22px;
+		font-weight: bold;
+		background: #83c192;
+	}
+	.admin-cost-once-list-text{
+		padding: 15px;
+		border: #d7d7d7 1px solid;
+		font-size: 14px;
+		color: #c11313;
+	}
+	.admin-cost-once-list-text span{
+		color: #222;
+	}
+	.admin-cost-once:first-child .admin-cost-once-list-item{
+		width: -webkit-calc(100% / 6);
+		width: -moz-calc(100% / 6);
+		width: calc(100% / 6);  
+	}
+	.admin-cost-once:last-child .admin-cost-once-list-item,
+	.admin-cost-once:nth-last-child(2) .admin-cost-once-list-item{
+		width: 100%;
+	}
+
+	.admin-procedure{
+		padding: 80px 0;
+		background: #258b3e;
+	}
+	.admin-procedure-title {
+	    margin-bottom: 70px;
+	    display: inline-block;
+	    border-bottom: #fff 4px dotted;
+	    color: #fff;
+	    font-size: 42px;
+	}
+	.admin-procedure-inner{
+		margin: 0 auto;
+		width: 1018px;
+	}
+	.admin-procedure-list{
+		margin: 0 -23px 44px;
+	}
+	.admin-procedure-list-item{
+		position: relative;
+		float: left;
+		margin: 0 23px;
+		width: 220px;
+		height: 280px;
+		border: #fff 1px solid;
+	}
+	.admin-procedure-list-item:after{
+		display: block;
+		content: '';
+		position: absolute;
+		right: -32px;
+		top: 50%;
+		margin-top: -10px;
+		width: 17px;
+		height: 20px;
+		background: url(https://www.g1system.co.jp/images/admin/admin-procedure-list-item-arrow.png) no-repeat center 0;
+	}
+	.admin-procedure-list-item:last-child:after{
+		display: none;
+	}
+	.admin-procedure-list-img{
+		margin: 0 auto;
+		width: 150px;
+		height: 150px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.admin-procedure-list-text{
+		padding-top: .5em;
+		color: #fff;
+		font-size: 18px;
+	}
+	.admin-procedure-contact{
+		margin: 0 -16px;
+		width: 1050px;
+	}
+	.admin-procedure-contact div a{
+		float: left;
+		display: block;
+		width: 350px;
+		height: 80px;
+		color: #fff;
+		font-size: 22px;
+		text-align: center;
+		line-height: 80px;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+	.admin-procedure-mail a{
+		background: #eeba00;
+	}
+	.admin-procedure-mail a::before {
+	    padding-right: 5px;
+	    content: '\f0e0';
+	    font-weight: bold;
+	    font-family: 'Font Awesome 5 Free';
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	.admin-procedure-line a{
+		background: #5bc875;
+	}
+	.admin-procedure-tel a{
+		background: #fff;
+		color: #319d4e !important;
+	}
+	.admin-procedure-tel a:before {
+		padding-right: 5px;
+		content: '\f095';
+		font-size: 20px;
+		font-weight: bold;
+		font-family: 'Font Awesome 5 Free';
+		line-height: 1;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+
+
+	.admin-voice{
+		padding: 70px 0 120px;
+	}
+	.admin-voice-title{
+		margin-bottom: 47px;
+		color: #258b3e;
+		font-size: 42px;
+		font-weight: bold;
+		line-height: 1.4;
+		background: url(https://www.g1system.co.jp/images/admin/admin-common-title-bg.png) no-repeat center bottom;
+	}
+	.admin-voice-list{
+		margin-left: -100px !important;
+		margin-right: -100px !important;
+	}
+	.admin-voice-list-item{
+		margin: 0 15px  !important;
+	}
+	.admin-voice-list-img{
+		float: left;
+		width: 50%;
+	}
+	.admin-voice-list-img img{
+	    -webkit-border-top-left-radius: 16px;
+	    -webkit-border-top-right-radius: 0;
+	    -webkit-border-bottom-right-radius: 0;
+	    -webkit-border-bottom-left-radius: 16px;
+	    -moz-border-radius-topleft: 16px;
+	    -moz-border-radius-topright: 0;
+	    -moz-border-radius-bottomright: 0;
+	    -moz-border-radius-bottomleft: 16px;
+	}
+	.admin-voice-list-body{
+		float: right;
+		position: relative;
+		width: 50%;
+		padding: calc((20 / 1900) * 100vw);
+		padding-right: calc((10 / 1900) * 100vw);
+		text-align: left;
+		border: #e2e2e2 1px solid;
+		border-left: none;
+	    -webkit-border-top-left-radius: 0;
+	    -webkit-border-top-right-radius: 16px;
+	    -webkit-border-bottom-right-radius: 16px;
+	    -webkit-border-bottom-left-radius: 0;
+	    -moz-border-radius-topleft: 0;
+	    -moz-border-radius-topright: 16px;
+	    -moz-border-radius-bottomright: 16px;
+	    -moz-border-radius-bottomleft: 0;
+	}
+	.admin-voice-list-title{
+		margin-bottom: .5em;
+		font-size: calc((18 / 1900) * 100vw);
+		font-weight: bold;
+	}
+	.admin-voice-list-text{
+		font-size: calc((14 / 1900) * 100vw);
+	}
+
+	/* 物件情報 一覧 */
+
+	/* タブ */
+	.top-tab{
+		margin: 0 auto;
+		width: 1080px;
+	}
+	ul#tabchange {
+		margin: 0 auto 50px;
+		width: 920px;
+		border: #dde0d6 1px solid;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+		-webkit-box-sizing: content-box;
+		-moz-box-sizing: content-box;
+		box-sizing: content-box;
+		
+	}
+	ul#tabchange li {
+		float: left;
+		display: inline-block;
+		width: 230px;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		font-size: 20px;
+	}
+	ul#tabchange li a{
+		display: block;
+		color: #222;
+		background: #fff;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+		opacity: 1;
+		text-decoration: none !important;
+	}
+	ul#tabchange li:nth-child(3) a{
+		border-right: #dde0d6 1px solid;
+		border-left: #dde0d6 1px solid;
+	}
+	.top-tab01 ul#tabchange li:nth-child(1) a,
+	.top-tab02 ul#tabchange li:nth-child(1) a{
+		color: #222;
+		background: #fff;
+	}
+	.top-tab01 ul#tabchange li:nth-child(2) a{
+		color: #fff;
+		background: #eeba00;
+	}
+	.top-tab02 ul#tabchange li:nth-child(3) a{
+		color: #fff;
+		background: #eeba00;
+	}
+	ul#tabchange li a.activeBox { /*表示コンテンツのタブのスタイル*/
+		color: #fff;
+		background: #eeba00;
+	}
+	ul#tabchange li a:hover {
+		color: #fff;
+		background: #eeba00;
+		border: none;
+		text-decoration: none;
+	}
+	div#tabchangeContents {
+		margin: 0 auto;
+		width: 1080px;
+		position: relative;
+		text-align: left !important;
+	}
+	.top-tab01 div#tabchangeContents div#box1,
+	.top-tab02 div#tabchangeContents div#box1{
+		display: none !important;
+	}
+	.top-tab01 div#tabchangeContents div#box2{
+		display: block !important;
+	}
+	.top-tab02 div#tabchangeContents div#box3{
+		display: block !important;
+	}
+	.top-tab03 div#tabchangeContents div#box4{
+		display: block !important;
+	}
+	div#tabchangeContents div.tabchangeBox{
+	}
+	div#tabchangeContents div.tabchangeBox h2{
+		margin-bottom: 40px;
+		padding-bottom: 20px;
+		font-size: 20px;
+		font-weight: bold;
+		border-bottom: #319d4e 3px solid;
+	}
+	.properties-once{
+		margin-bottom: 40px;
+	}
+	.properties-once-title{
+		position: relative;
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		padding: 15px 30px;
+		background: #319d4e;
+	}
+	.properties-once-title a.detail-link{
+		display: block;
+		position: absolute;
+		top: 12px;
+		width: 140px;
+		height: 32px;
+		line-height: 32px;
+		-webkit-border-radius: 16px;
+		-moz-border-radius: 16px;
+		border-radius: 16px;
+		background: #eeba00;
+		color: #fff;
+		font-size: 12px;
+		text-align: center;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+		right: 28px;
+	}
+	.properties-once-title form input.mail{
+		display: block;
+		position: absolute;
+		top: 12px;
+		right: 175px;
+		width: 140px;
+		height: 32px;
+		line-height: 32px;
+		-webkit-border-radius: 16px;
+		-moz-border-radius: 16px;
+		border-radius: 16px;
+		background: #eeba00;
+		color: #fff;
+		font-size: 12px;
+		text-align: center;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+		border: none;
+		cursor: pointer;
+	}
+	.properties-once-title form input.mail:hover,
+	.properties-once-title a:hover{
+		opacity: .75;
+		text-decoration: none;
+	}
+	.properties-once-inner{
+		padding: 30px;
+		border: #dde0d6 1px solid;
+		border-top: none;
+	}
+	.properties-once-img{
+		float: left;
+		width: 350px;
+	}
+	.properties-once-body{
+		float: right;
+		width: 650px;
+		text-align: left;
+	}
+	.properties-once-body table{
+		width: 100% !important;
+	}
+	.properties-once-body tr:nth-child(odd){
+		background: #FFF;
+	}
+	.properties-once-body th{
+		width: 150px;
+		font-size: 14px;
+		padding: 14px;
+	}
+	.properties-once-body td span{
+		color: #dd6627;
+		font-size: 22px;
+		font-weight: bold;
+	}
+
+	/* 物件情報 詳細 */
+
+	.properties-title{
+		margin-bottom: 0 !important;
+	}
+	.gallery-detail{
+		margin-bottom: 60px;
+		padding: 40px;
+		background: #FFF;
+	}
+	.gallery-detail-main{
+		margin: 0;
+		float: left;
+		width: 580px;
+	}
+	.gallery-detail-sub{
+		float: right;
+		width: 390px;
+	}
+	.gallery-detail-sub ul{
+		margin: 0 -5px;
+	}
+	.gallery-detail-sub ul li{
+		float: left;
+		margin: 0 5px 10px;
+		width: 90px;
+	}
+	.gallery-detail-sub ul li span{
+		display: none;
+	}
+	.gallery-detail-sub ul li:first-child{
+		height: 110px;
+		border: #319d4e 3px solid;
+	}
+	.gallery-detail-sub ul li:first-child span{
+		display: block;
+		padding-top: 2px;
+		background: #319d4e;
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+	}
+	.gallery-content{
+		padding: 25px 30px;
+		border: #dde0d6 1px solid;
+		margin-bottom: 20px;
+	}
+	.gallery-content table{
+		width: 1020px;
+	}
+	.gallery-content table th{
+		width: 120px;
+		font-size: 14px;
+		text-align: center;
+		padding: 13px 1em;
+		background: #eeba00;
+		border-bottom: #fff 2px solid;
+	}
+	.gallery-content table td{
+		min-width: 380px;
+		text-align: left;
+		padding: 13px;
+		font-size: 14px;
+		border-bottom: #fff 2px solid;
+	}
+	.gallery-content table td span{
+		color: #dd6627;
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.gallery-time{
+		margin-bottom: 60px;
+	}
+	.gallery-map-title{
+		margin-bottom: 22px;
+	    padding-bottom: 20px;
+	    font-size: 20px;
+	    font-weight: bold;
+	    border-bottom: #319d4e 3px solid;
+	}
+	.gallery-map{
+		margin-bottom: 60px;
+	}
+	.gallery-map-inner,
+	.gallery-map-inner iframe{
+		height: 360px;
+		width: 100%;
+	}
+	.gallery-contact-title{
+		margin-bottom: 36px;
+	    padding-bottom: 20px;
+	    font-size: 20px;
+	    font-weight: bold;
+	    border-bottom: #319d4e 3px solid;
+	}
+	.gallery-contact-inner{
+		margin: 0 auto;
+		width: 900px;
+	}
+	.gallery-contact-tel{
+		float: left;
+	}
+	.gallery-contact-tel a {
+	    display: block;
+	    width: 440px;
+	    height: 60px;
+	    line-height: 60px;
+	    text-align: center;
+	    background: #e2e2e2;
+	    font-size: 23px;
+	    font-weight: bold;
+	    letter-spacing: 0.05em;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 30px;
+	    opacity: 1;
+	    -webkit-transition-duration: 0.5s;
+	    -moz-transition-duration: 0.5s;
+	    -ms-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+	    transition-duration: 0.5s;
+	}
+	.gallery-contact-tel a::before {
+	    padding-right: 5px;
+	    content: '\f095';
+	    font-size: 20px;
+	    font-weight: bold;
+	    font-family: 'Font Awesome 5 Free';
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+	    -moz-osx-font-smoothing: grayscale;
+	}
+	.gallery-contact-tel a:hover{
+		opacity: 0.75;
+		text-decoration: none;
+	}
+
+	.gallery-contact-mail{
+		float: right;
+	}
+	.gallery-contact-mail input.mail{
+	    display: block;
+	    width: 440px;
+	    height: 60px;
+	    line-height: 60px;
+	    text-align: center;
+	    background: #eeba00;
+		color: #fff;
+	    font-size: 23px;
+	    font-weight: bold;
+	    letter-spacing: 0.05em;
+		-webkit-border-radius: 30px;
+		-moz-border-radius: 30px;
+		border-radius: 30px;
+	    opacity: 1;
+	    -webkit-transition-duration: 0.5s;
+	    -moz-transition-duration: 0.5s;
+	    -ms-transition-duration: 0.5s;
+	    -o-transition-duration: 0.5s;
+	    transition-duration: 0.5s;
+		border: none;
+		cursor: pointer;
+	}
+	.gallery-contact-mail input.mail:hover{
+		opacity: 0.75;
+	}
+
+
+	/* Arrows */
+	.lg-actions .lg-next, .lg-actions .lg-prev{
+		color: #fff !important;
+	}
+	.lg-actions .lg-prev:before,
+	.lg-actions .lg-next:before{
+		font-family: 'Font Awesome 5 Free';
+		line-height: 1;
+		color: #fff;
+		font-size: 20px;
+		font-weight: bold;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+	.lg-actions .lg-prev:before{
+		content: '\f104';
+	}
+	.lg-actions .lg-next:before{
+		content: '\f105';
+	}
+	.lg-actions .lg-prev:after,
+	.lg-actions .lg-next:after{
+		display: none;
+	}
+
+	/* 会社について */
+	.lower-top-once{
+		position: relative;
+		margin: 0 2% 50px 0;
+		width: 32%;
+		float: left;
+	}
+	.lower-top-once:nth-child(3n){
+		margin-right: 0;
+	}
+	.lower-top-once-title a{
+		display: block;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		background: #258b3e;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+	.lower-top-once-title a:hover{
+		opacity: 0.75;
+		text-decoration: none;
+	}
+	.lower-top-once-inner{
+		padding: 10px 10px 50px;
+		border: #258b3e 1px solid;
+	}
+	.lower-top-once-img{
+		margin-bottom: 10px;
+	}
+	.lower-top-once-img img{
+		width: 100% !important;
+	}
+	.lower-top-once-btn a{
+		display: block;
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 30px;
+		line-height: 30px;
+		text-align: center;
+		color: #000;
+		font-size: 12px;
+		background: #eeba00;
+		opacity: 1;
+		-webkit-transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-ms-transition-duration: 0.5s;
+		-o-transition-duration: 0.5s;
+		transition-duration: 0.5s;
+	}
+	.lower-top-once-btn a:hover{
+		opacity: 0.75;
+		text-decoration: none;
+	}
+
+	.term-qa h3{
+		padding-left: 40px;
+		background: url(https://www.g1system.co.jp/images/common/q.png) no-repeat 0 50%;
+	}
+	.term-qa p:first-letter{
+		padding-left: 40px;
+		background: url(https://www.g1system.co.jp/images/common/a.png) no-repeat 0 50%;
+	}
+
+	.gallery-youtube{
+		margin: 0 auto 50px;
+		width: 600px;
+	}
+
+	.gallery-content table th,
+	.gallery-content table td{
+		vertical-align: top;
+	}
+
+	a.read-more{
+		color: #f60;
+	}
+
+	.gallery-theta{
+		margin-bottom: 30px;
+		text-align: center;
+	}
+	.gallery-theta blockquote ,
+	.gallery-theta iframe{
+		width: 100% !important;
+	}
+
+	.properties-icon{
+		margin-bottom: 20px;
+		display: flex;
+		justify-content: flex-start;
+	}
+	.single-properties .properties-icon{
+		margin: 20px 0 0 0;
+	}
+	.properties-icon div{
+		margin-right: 10px;
+		background: #319d4e;
+		color: #fff;
+		font-size: 15px;
+		font-weight: bold;
+		height: 30px;
+		padding: 0 2.0em;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+	}
+	.properties-icon div:last-child{
+		background: #eeba00;
+	}
+
+	.single-properties .gallery-detail-sub ul li{
+		border: none !important;
+	}
+
+	.admin-movie{
+		margin: 0 auto 50px;
+		width: 1080px;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+	}
+}

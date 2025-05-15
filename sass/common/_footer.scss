@@ -1,0 +1,143 @@
+@use "../_setting" as s;
+
+#footer {
+	background:s.$colorType04;
+	padding:3em 0 0 0;
+	clear: both;
+	opacity:1;
+	transition:all .3s ease;
+	@include s.media(m){
+		padding:6em 0 0 0;
+	}
+}
+
+.footer__inner {
+	width:95%;
+	margin-left:5%;
+	display:flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
+	@include s.media(m){
+		width:100%;
+		margin-left:0;
+	}
+}
+
+.footer__naviBox {
+	width:48%;
+	display:block;
+	position:relative;
+	margin-bottom:1.5em;
+	@include s.media(m){
+		margin-bottom:0;
+	}
+	&:before {
+		content:"";
+		width:1px;
+		height:100%;
+		background:s.$colorType02;
+		display:block;
+		position:absolute;
+		top:0;
+		left:-1em;
+		@include s.media(m){
+			content:none;
+		}
+	}
+	@include s.media(m){
+		width:20%;
+		padding-right:2em;
+	}
+	&:nth-child(1){
+		@include s.media(m){
+			width:18%;
+		}
+	}
+	&:nth-child(2){
+		@include s.media(m){
+			width:24%;
+		}
+	}
+	&:nth-child(4){
+		@include s.media(m){
+			width:18%;
+		}
+	}
+	&:last-child{
+		.footer__navi li a{
+			font-size:1em;
+		}
+	}
+}
+
+#wrapper .footer__naviBox {
+	p{
+		@include s.fontType01(Medium);
+		color:#FFF;
+		font-size:1.375em;
+		a{
+			color:#FFF;
+			text-decoration:none;
+			&:hover {
+				color: s.$colorType06;
+				text-decoration:none;
+			}
+		}
+	}
+}
+
+.footer__navi {
+	width:100%;
+	//border-bottom:#000 dotted 1px;
+	display:block;
+	@include s.media(m){
+		border-bottom:none;
+		margin-bottom:3em;
+	}
+	li{
+		padding:0.1em 0;
+		//border-top:#000 dotted 1px;
+		@include s.media(m){
+			border:none;
+		}
+		a,span{
+			font-size:0.85em;
+			color:#FFF;
+			text-decoration:none;
+			@include s.fontType01(Medium);
+			@include s.media(m){
+				font-size:0.9em;
+			}
+			&:hover {
+				color: s.$colorType06;
+				text-decoration:none;
+			}
+		}
+		span{
+			pointer-events:none;
+		}
+		ul{
+			li{
+				@include s.media(m){
+					border:none;
+					padding:0 0 0 0.5em;
+				}
+				a{
+					position:relative;
+					padding-left:0.8em;
+					&::before {
+						content:"";
+						width:0.5em;
+						height:1px;
+						background:#FFF;
+						display:block;
+						position:absolute;
+						top:50%;
+						left:0;
+						margin-top:-0.5px;
+					}
+				}
+			}
+		}
+	}
+}

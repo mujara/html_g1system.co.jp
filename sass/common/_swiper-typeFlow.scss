@@ -1,0 +1,41 @@
+@use "../_setting" as s;
+
+.sliderBox--typeFlow01,.sliderBox--typeFlow02,.sliderBox--typeFlow03 {
+	.swiper{
+		overflow: visible;
+	}
+	figure {
+		width:14em;
+		position: relative;
+		overflow: hidden;
+		margin-bottom:0.5em;
+		@include s.media(m){
+			width:22em;
+		}
+		img{
+			width: 100%;
+		}
+	}
+	.swiper-wrapper {
+		-webkit-transition-timing-function: linear !important;
+			transition-timing-function: linear !important;
+	}
+	.swiper-slide {
+		width: -webkit-max-content;
+		width: -moz-max-content;
+		width: max-content;
+	}
+}
+
+.sliderBox--typeFlow03 figure{ margin-bottom:0;}
+
+
+
+
+
+
+
+
+
+
+

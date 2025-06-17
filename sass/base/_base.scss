@@ -134,6 +134,11 @@ body {
 	overflow:hidden;
 }
 
+.fullView {
+	margin: 0 calc(50% - 50vw);
+	width: 100vw;
+}
+
 .hidden-all{ display:none !important; }
 .hidden-sp{ display:none !important; }
 .is-smallScreen .hidden-sp{ display:none; }

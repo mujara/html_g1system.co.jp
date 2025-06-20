@@ -328,13 +328,29 @@
 				background:#E7E7E7;
 				padding:0.3em 0.5em;
 				text-align:center;
+				position:relative;
 				@include s.media(m){
 					background:none;
 					padding:0;
 					text-align:left;
 				}
+				&::before{
+					@include s.media(m){
+						content:"";
+						width:0.2em;
+						height:0.2em;
+						border-radius:50%;
+						background:#000;
+						position:absolute;
+						top:0.6em;
+						left:-0.7em;
+					}
+				}
 				b{
 					color:s.$colorType03;
+					@include s.media(m){
+						//color:#FCA603;
+					}
 				}
 			}
 		}
@@ -808,19 +824,16 @@
 				//display:flex;
 				//justify-content:space-between;
 			}
-			a{
+			a,span.swiper-slide{
 				display:block;
 				background:#FFF;
 				padding:1.5em;
 				border-radius:1em;
 				opacity:1;
 				margin-bottom:1.5em;
-				pointer-events:none;
+				//pointer-events:none;
 				@include s.media(m){
 					//width:31%;
-				}
-				&:hover{
-					opacity:.6;
 				}
 				figure{
 					display:block;
@@ -896,6 +909,64 @@
 			.swiper-button-prev{
 				margin-left: -2.5em;
 			}
+			a{
+				&:hover{
+					opacity:.6;
+				}
+			}
+		}
+	}
+	.accordion--typeVoice{
+		border-bottom:#808080 solid 1px;
+		&:last-child{
+			border-bottom:none;
+		}
+		label{
+		    display: block;
+		    padding : 0.9em 1em;
+		    color :#000;
+		    background :#FFF;
+		    cursor :pointer;
+		    transition: all 0.5s;
+		    position:relative;
+			@include s.fontType01(Bold);
+			&::after{
+			    content: "\f078";
+				font-family: 'icomoon';
+			    position: absolute;
+			    top: 50%;
+			    right: 1.4em;
+			    margin-top:-0.5em;
+			    transition: all 0.5s;
+			}
+		    &:hover {
+			    background :#DDD;
+			}
+		}
+		input {
+		    display: none;
+		}
+		&__content {
+		    height: 0;
+		    padding: 0;
+		    overflow: hidden;
+		    opacity: 0;
+		    transition: 0.5s;
+		}
+		//クリックで中身表示
+		&__check:checked + label + .accordion--typeVoice__content {
+		    height: auto;
+		    padding: calc(s.$spaceSize/2) 0;
+		    opacity: 1;
+			@include s.media(m){
+		    	padding: s.$spaceSize 0;
+			}
+		}
+		&__check:checked + label{
+			background:#fded65;
+		}
+		&__check:checked + label::after{
+			transform: rotateZ(180deg);
 		}
 	}
 	.adminReasonFlowBox{
@@ -1055,6 +1126,7 @@
 				bottom:-0.58em;
 				left:0;
 				display:block;
+				z-index:2;
 			}
 			figure{
 				width:1.9em;
@@ -1153,7 +1225,7 @@
 			transition: all 0.5s;
 			position:relative;
 			@include s.media(m){
-				cursor :auto;
+				//cursor :auto;
 			}
 			&:hover {
 			}
@@ -1208,8 +1280,8 @@
 			opacity: 0;
 			transition: 0.5s;
 			@include s.media(m){
-				height: auto;
-				opacity:1;
+				//height: auto;
+				//opacity:1;
 			}
 		}
 		//クリックで中身表示
@@ -1226,7 +1298,7 @@
 		&__check:checked + label .accordion--typeService__icon div:last-child{
 			transform: none;
 			@include s.media(m){
-				transform: rotate(90deg);
+				//transform: rotate(90deg);
 			}
 		}
 	}

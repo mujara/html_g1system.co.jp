@@ -733,6 +733,45 @@ require([
 	  mediaQuery.addListener(checkBreakpoint);
 	  checkBreakpoint(mediaQuery);
 
+	//コンテンツのスライダー　ループなし
+	  let mySwiperTypeChangeSlide2 = null;
+	  const mediaQuery2 = window.matchMedia('(max-width: 768px)');
+
+	  const checkBreakpoint2 = (e) => {
+	    if (e.matches) {
+	      initSwiperTypeChangeSlide2();
+	    } else if (mySwiperTypeChangeSlide2) {
+	      mySwiperTypeChangeSlide2.destroy(false, true);
+	    }
+	  }
+
+	  const initSwiperTypeChangeSlide2 = () => {
+	    mySwiperTypeChangeSlide2 = new Swiper('.sliderBox--typeChangeSlide2 .swiper', {
+	      slidesPerView: 1,
+	      spaceBetween: 16,
+	      //loop: true,
+	      loopAdditionalSlides: 1,
+	      speed: 1000,
+	      grabCursor: true,
+	      pagination: {
+	        el: '.sliderBox--typeChangeSlide2 .swiper-pagination', // ページネーション要素のクラス
+	        clickable: true, //クリックを有効化する
+	      },
+	      navigation: {
+	        nextEl: '.sliderBox--typeChangeSlide2 .swiper-button-next',
+	        prevEl: '.sliderBox--typeChangeSlide2 .swiper-button-prev',
+	      },
+	      breakpoints: {
+	        600: {// 画面幅600px以上で適用
+	          slidesPerView: 3,
+	        }
+	      },
+	    });
+	  };
+
+	  mediaQuery2.addListener(checkBreakpoint2);
+	  checkBreakpoint2(mediaQuery2);
+
 	
 });//end function文 & require
 
